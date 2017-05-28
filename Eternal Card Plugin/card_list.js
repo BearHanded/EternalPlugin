@@ -6,9 +6,14 @@ const SET_REGEX = /\(Set.*/,
     NUM_REGEX = /#.*\)/,
     ETERNAL_WARCRY = "https://eternalwarcry.com/cards/details/",
     CARD_ART =       "https://cards.eternalwarcry.com/cards/full/",
-    CARD_SIZE = '50',
+    SM_CARD = "et-card-sm",
+    MD_CARD = "et-card-md",
+    LG_CARD = "et-card-lg",
     MAX_ENTRIES = 10,
     DECK_MIN = 6;
+
+var cardClass = MD_CARD,
+    displayCards = true;
 
 // Escape characters for strings that break links in the attributes. Funky quotes
 function strSanitize( stringIn ) {
@@ -77,7 +82,7 @@ function wrapLink(textIn) {
 //Card names should have "*(Set #*)"
 //Cards should be a whole line
 //Want [2]-> '(Set*'
-var crawlText = function(parentNode){
+function crawlText(parentNode){
     //Check each node, not just the flat body
     for(var i = parentNode.childNodes.length-1; i >= 0; i--){
         var node = parentNode.childNodes[i];
@@ -99,7 +104,31 @@ var crawlText = function(parentNode){
     }
 };
 
+function getSettings() {
+    chrome.storage.sync.get(['cardSize', 'displayCard'], function(items) {
+        //Defaults
+        var size = 'medium'
+
+        //Load from memory
+        if(typeof items.cardSize !== 'undefined') size = items.cardSize;
+        //Switch to appropriate css class
+        switch(size) {
+            case "small":
+                cardClass = SM_CARD
+                break;
+            case "large":
+                cardClass = LG_CARD
+                break;
+            case "medium":
+            default:
+                cardClass = MD_CARD
+        }
+    })
+};
+
 function init() {
+    //Configure display settings from options
+    getSettings();
     // Run Crawl
     crawlText(document.body);
 
@@ -108,17 +137,34 @@ function init() {
         var yOff = 20;
         var xOff = 25;
 
+        //Don't build if setting is off
         $(document).on('mouseenter', ".card-view", function (e) {
             var cardName = strSanitize($(this).attr("data-card-name"))
             var artPath = CARD_ART.concat(cardName, ".png");
-
-            $("body").append("<p id='card-img'><img src='" + artPath + "'/></p>");
+            var size = 600;
+            $("body").append("<p id='card-img' class='" + cardClass + "'><img src='" + artPath + "'/></p>");
             $("#card-img")
                 .css("position", "absolute")
                 .css("top", (e.pageY - yOff) + "px")
                 .css("left", (e.pageX + xOff) + "px")
                 .css("z-index", "999")
                 .fadeIn("fast");
+
+            //ADD CSS to img.
+            switch(cardClass) {
+                case SM_CARD:
+                    size = 150;
+                    break;
+                case LG_CARD:
+                    size = 600;
+                    break;
+                case MD_CARD:
+                default:
+                    size = 300;
+            }
+            $("#card-img").children('img')
+                .css("height", size+"px")
+                .css("max-width", "100%")
         })
 
         //TRIGGERED ON MOVE?

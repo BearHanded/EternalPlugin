@@ -1,4 +1,14 @@
-#card-img > img{
+.et-card-sm img {
+    height: 150px;
+    max-width: 100%;
+}
+
+.et-card-md img {
     height: 300px;
+    max-width: 100%;
+}
+
+.et-card-lg img {
+    height: 600px;
     max-width: 100%;
 }
