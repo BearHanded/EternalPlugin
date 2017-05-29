@@ -9,3 +9,20 @@ This project is not associated with Eternal Card Game or Direwolf and is a fan m
 
 # Installation
 Add the plugin to chrome in the [Google Web Store](https://chrome.google.com/webstore/detail/eternal-card-plugin/lnkfahodgopogehaemmnjcneolimcnbn)
+
+# Running Frak and generating regex
+
+Navigate to a installed directory of Frak.
+`lein repl`
+
+`user> (require '[clojure.java.io :as io])
+nil
+user> (def words
+           (-> (io/file "/usr/share/dict/words")
+               io/reader
+               line-seq))
+#'user/words
+user> (def word-re (frak/pattern words))
+#'user/word-re
+user> (every? #(re-matches word-re %) words)
+true`

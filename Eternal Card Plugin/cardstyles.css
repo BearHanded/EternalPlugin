@@ -9,6 +9,11 @@
 }
 
 .et-card-lg img {
+    height: 450px;
+    max-width: 100%;
+}
+
+.et-card-xl img {
     height: 600px;
     max-width: 100%;
 }

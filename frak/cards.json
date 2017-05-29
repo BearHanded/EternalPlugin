@@ -1,0 +1,2534 @@
+{
+   "Cards":[
+      {
+         "cardName":"Granite Monument",
+         "cardNumber":423,
+         "set":1
+      },
+      {
+         "cardName":"Charchain Flail",
+         "cardNumber":3,
+         "set":1
+      },
+      {
+         "cardName":"Flame Blast",
+         "cardNumber":2,
+         "set":1
+      },
+      {
+         "cardName":"Forge Wolf",
+         "cardNumber":1,
+         "set":0
+      },
+      {
+         "cardName":"Grenadin Drone",
+         "cardNumber":5,
+         "set":1
+      },
+      {
+         "cardName":"Oni Ronin",
+         "cardNumber":13,
+         "set":1
+      },
+      {
+         "cardName":"Pyroknight",
+         "cardNumber":16,
+         "set":1
+      },
+      {
+         "cardName":"Ruthless Stranger",
+         "cardNumber":11,
+         "set":1
+      },
+      {
+         "cardName":"Ticking Grenadin",
+         "cardNumber":12,
+         "set":1
+      },
+      {
+         "cardName":"Warhelm",
+         "cardNumber":14,
+         "set":1
+      },
+      {
+         "cardName":"Bladekin Apprentice",
+         "cardNumber":22,
+         "set":1
+      },
+      {
+         "cardName":"Brazen Daredevil",
+         "cardNumber":19,
+         "set":1
+      },
+      {
+         "cardName":"Ornate Katana",
+         "cardNumber":23,
+         "set":1
+      },
+      {
+         "cardName":"Pyre Adept",
+         "cardNumber":21,
+         "set":1
+      },
+      {
+         "cardName":"Rakano Outlaw",
+         "cardNumber":20,
+         "set":1
+      },
+      {
+         "cardName":"Rampage",
+         "cardNumber":17,
+         "set":1
+      },
+      {
+         "cardName":"Song of War",
+         "cardNumber":18,
+         "set":1
+      },
+      {
+         "cardName":"Censari Brigand",
+         "cardNumber":34,
+         "set":1
+      },
+      {
+         "cardName":"Granite Acolyte",
+         "cardNumber":31,
+         "set":1
+      },
+      {
+         "cardName":"Oni Quartermaster",
+         "cardNumber":32,
+         "set":1
+      },
+      {
+         "cardName":"Rakano Flagbearer",
+         "cardNumber":27,
+         "set":1
+      },
+      {
+         "cardName":"Rebel Sharpshooter",
+         "cardNumber":30,
+         "set":1
+      },
+      {
+         "cardName":"Shogun's Scepter",
+         "cardNumber":26,
+         "set":1
+      },
+      {
+         "cardName":"Centaur Outrider",
+         "cardNumber":35,
+         "set":1
+      },
+      {
+         "cardName":"Furnace Mage",
+         "cardNumber":40,
+         "set":1
+      },
+      {
+         "cardName":"Guerrilla Fighter",
+         "cardNumber":36,
+         "set":1
+      },
+      {
+         "cardName":"Morningstar",
+         "cardNumber":510,
+         "set":1
+      },
+      {
+         "cardName":"Outlands Sniper",
+         "cardNumber":42,
+         "set":1
+      },
+      {
+         "cardName":"Rebel Illuminator",
+         "cardNumber":43,
+         "set":1
+      },
+      {
+         "cardName":"Recogulator",
+         "cardNumber":37,
+         "set":1
+      },
+      {
+         "cardName":"Steelfang Chakram",
+         "cardNumber":38,
+         "set":1
+      },
+      {
+         "cardName":"Centaur Raidleader",
+         "cardNumber":50,
+         "set":1
+      },
+      {
+         "cardName":"Dusthoof Brawler",
+         "cardNumber":49,
+         "set":1
+      },
+      {
+         "cardName":"Infernus",
+         "cardNumber":45,
+         "set":1
+      },
+      {
+         "cardName":"Obliterate",
+         "cardNumber":48,
+         "set":1
+      },
+      {
+         "cardName":"Shogun of the Wastes",
+         "cardNumber":51,
+         "set":1
+      },
+      {
+         "cardName":"Crowd Favorite",
+         "cardNumber":58,
+         "set":1
+      },
+      {
+         "cardName":"Frontline Cyclops",
+         "cardNumber":53,
+         "set":1
+      },
+      {
+         "cardName":"General Izalio",
+         "cardNumber":56,
+         "set":1
+      },
+      {
+         "cardName":"Hellfire Rifle",
+         "cardNumber":55,
+         "set":1
+      },
+      {
+         "cardName":"Stonescar Maul",
+         "cardNumber":52,
+         "set":1
+      },
+      {
+         "cardName":"Worldpyre Phoenix",
+         "cardNumber":54,
+         "set":1
+      },
+      {
+         "cardName":"Claw of the First Dragon",
+         "cardNumber":59,
+         "set":1
+      },
+      {
+         "cardName":"Steelbound Dragon",
+         "cardNumber":60,
+         "set":1
+      },
+      {
+         "cardName":"Kaleb, Uncrowned Prince",
+         "cardNumber":61,
+         "set":1
+      },
+      {
+         "cardName":"Lavablood Goliath",
+         "cardNumber":62,
+         "set":1
+      },
+      {
+         "cardName":"Amber Monument",
+         "cardNumber":420,
+         "set":1
+      },
+      {
+         "cardName":"Copper Conduit",
+         "cardNumber":66,
+         "set":1
+      },
+      {
+         "cardName":"Humbug",
+         "cardNumber":72,
+         "set":1
+      },
+      {
+         "cardName":"Infinite Hourglass",
+         "cardNumber":67,
+         "set":1
+      },
+      {
+         "cardName":"Initiate of the Sands",
+         "cardNumber":74,
+         "set":1
+      },
+      {
+         "cardName":"Ornamental Daggers",
+         "cardNumber":69,
+         "set":1
+      },
+      {
+         "cardName":"Predator's Instinct",
+         "cardNumber":75,
+         "set":1
+      },
+      {
+         "cardName":"Sanctuary Priest",
+         "cardNumber":73,
+         "set":1
+      },
+      {
+         "cardName":"Silence",
+         "cardNumber":9,
+         "set":0
+      },
+      {
+         "cardName":"Accelerate",
+         "cardNumber":85,
+         "set":1
+      },
+      {
+         "cardName":"Bold Adventurer",
+         "cardNumber":77,
+         "set":1
+      },
+      {
+         "cardName":"Ephemeral Wisp",
+         "cardNumber":84,
+         "set":1
+      },
+      {
+         "cardName":"Friendly Wisp",
+         "cardNumber":82,
+         "set":1
+      },
+      {
+         "cardName":"Sauropod Wrangler",
+         "cardNumber":83,
+         "set":1
+      },
+      {
+         "cardName":"Talir's Favored",
+         "cardNumber":11,
+         "set":0
+      },
+      {
+         "cardName":"Temple Scribe",
+         "cardNumber":502,
+         "set":1
+      },
+      {
+         "cardName":"Voice of the Speaker",
+         "cardNumber":78,
+         "set":1
+      },
+      {
+         "cardName":"Ageless Mentor",
+         "cardNumber":90,
+         "set":1
+      },
+      {
+         "cardName":"Amber Acolyte",
+         "cardNumber":93,
+         "set":1
+      },
+      {
+         "cardName":"Clockroach",
+         "cardNumber":94,
+         "set":1
+      },
+      {
+         "cardName":"Dawnwalker",
+         "cardNumber":86,
+         "set":1
+      },
+      {
+         "cardName":"Determined Stranger",
+         "cardNumber":92,
+         "set":1
+      },
+      {
+         "cardName":"Dispel",
+         "cardNumber":91,
+         "set":1
+      },
+      {
+         "cardName":"Dune Phantom",
+         "cardNumber":89,
+         "set":1
+      },
+      {
+         "cardName":"Scorpion Wasp",
+         "cardNumber":96,
+         "set":1
+      },
+      {
+         "cardName":"Healer's Cloak",
+         "cardNumber":98,
+         "set":1
+      },
+      {
+         "cardName":"Horned Vorlunk",
+         "cardNumber":503,
+         "set":1
+      },
+      {
+         "cardName":"Marisen's Disciple",
+         "cardNumber":104,
+         "set":1
+      },
+      {
+         "cardName":"Praxis Displacer",
+         "cardNumber":100,
+         "set":1
+      },
+      {
+         "cardName":"Sandstorm Titan",
+         "cardNumber":99,
+         "set":1
+      },
+      {
+         "cardName":"Steward of Prophecy",
+         "cardNumber":97,
+         "set":1
+      },
+      {
+         "cardName":"Timekeeper",
+         "cardNumber":14,
+         "set":0
+      },
+      {
+         "cardName":"Towertop Patrol",
+         "cardNumber":101,
+         "set":1
+      },
+      {
+         "cardName":"Xenan Guardian",
+         "cardNumber":102,
+         "set":1
+      },
+      {
+         "cardName":"Elysian Pathfinder",
+         "cardNumber":108,
+         "set":1
+      },
+      {
+         "cardName":"Idol of Destran",
+         "cardNumber":107,
+         "set":1
+      },
+      {
+         "cardName":"Lumen Defender",
+         "cardNumber":115,
+         "set":1
+      },
+      {
+         "cardName":"Reliquary Raider",
+         "cardNumber":110,
+         "set":1
+      },
+      {
+         "cardName":"Striking Snake Formation",
+         "cardNumber":112,
+         "set":1
+      },
+      {
+         "cardName":"Towering Terrazon",
+         "cardNumber":114,
+         "set":1
+      },
+      {
+         "cardName":"Twinbrood Sauropod",
+         "cardNumber":113,
+         "set":1
+      },
+      {
+         "cardName":"Divining Rod",
+         "cardNumber":109,
+         "set":1
+      },
+      {
+         "cardName":"Lumen Shepherd",
+         "cardNumber":117,
+         "set":1
+      },
+      {
+         "cardName":"Mystic Ascendant",
+         "cardNumber":116,
+         "set":1
+      },
+      {
+         "cardName":"Predatory Carnosaur",
+         "cardNumber":118,
+         "set":1
+      },
+      {
+         "cardName":"Ancient Terrazon",
+         "cardNumber":119,
+         "set":1
+      },
+      {
+         "cardName":"Dormant Sentinel",
+         "cardNumber":120,
+         "set":1
+      },
+      {
+         "cardName":"Pillar of Amar",
+         "cardNumber":122,
+         "set":1
+      },
+      {
+         "cardName":"Marisen, the Eldest",
+         "cardNumber":123,
+         "set":1
+      },
+      {
+         "cardName":"Talir, Who Sees Beyond",
+         "cardNumber":124,
+         "set":1
+      },
+      {
+         "cardName":"Emerald Monument",
+         "cardNumber":422,
+         "set":1
+      },
+      {
+         "cardName":"District Infantry",
+         "cardNumber":134,
+         "set":1
+      },
+      {
+         "cardName":"Elder's Feather",
+         "cardNumber":128,
+         "set":1
+      },
+      {
+         "cardName":"Protect",
+         "cardNumber":132,
+         "set":1
+      },
+      {
+         "cardName":"Steadfast Deputy",
+         "cardNumber":504,
+         "set":1
+      },
+      {
+         "cardName":"Tinker Apprentice",
+         "cardNumber":131,
+         "set":1
+      },
+      {
+         "cardName":"Valkyrie Aspirant",
+         "cardNumber":127,
+         "set":1
+      },
+      {
+         "cardName":"Argenport Soldier",
+         "cardNumber":135,
+         "set":1
+      },
+      {
+         "cardName":"Eager Owlet",
+         "cardNumber":144,
+         "set":1
+      },
+      {
+         "cardName":"Minotaur Grunt",
+         "cardNumber":137,
+         "set":1
+      },
+      {
+         "cardName":"Seek Power",
+         "cardNumber":408,
+         "set":1
+      },
+      {
+         "cardName":"Fire Sigil",
+         "cardNumber":1,
+         "set":1
+      },
+      {
+         "cardName":"Trail Stories",
+         "cardNumber":188,
+         "set":1
+      },
+      {
+         "cardName":"Heavy Axe",
+         "cardNumber":4,
+         "set":1
+      },
+      {
+         "cardName":"Light the Fuse",
+         "cardNumber":6,
+         "set":1
+      },
+      {
+         "cardName":"Ruin",
+         "cardNumber":15,
+         "set":1
+      },
+      {
+         "cardName":"Temper",
+         "cardNumber":10,
+         "set":1
+      },
+      {
+         "cardName":"Torch",
+         "cardNumber":8,
+         "set":1
+      },
+      {
+         "cardName":"Kaleb's Favor",
+         "cardNumber":3,
+         "set":0
+      },
+      {
+         "cardName":"Piercing Shot",
+         "cardNumber":25,
+         "set":1
+      },
+      {
+         "cardName":"Assembly Line",
+         "cardNumber":29,
+         "set":1
+      },
+      {
+         "cardName":"Rally",
+         "cardNumber":33,
+         "set":1
+      },
+      {
+         "cardName":"Burn Out",
+         "cardNumber":28,
+         "set":1
+      },
+      {
+         "cardName":"Cloud of Ash",
+         "cardNumber":39,
+         "set":1
+      },
+      {
+         "cardName":"Magma Javelin",
+         "cardNumber":41,
+         "set":1
+      },
+      {
+         "cardName":"Flash Fire",
+         "cardNumber":6,
+         "set":0
+      },
+      {
+         "cardName":"Time Sigil",
+         "cardNumber":63,
+         "set":1
+      },
+      {
+         "cardName":"Slow",
+         "cardNumber":70,
+         "set":1
+      },
+      {
+         "cardName":"Refresh",
+         "cardNumber":501,
+         "set":1
+      },
+      {
+         "cardName":"Synchronized Strike",
+         "cardNumber":88,
+         "set":1
+      },
+      {
+         "cardName":"Teleport",
+         "cardNumber":80,
+         "set":1
+      },
+      {
+         "cardName":"Decay",
+         "cardNumber":95,
+         "set":1
+      },
+      {
+         "cardName":"Oasis Sanctuary",
+         "cardNumber":15,
+         "set":0
+      },
+      {
+         "cardName":"Secret Pages",
+         "cardNumber":81,
+         "set":1
+      },
+      {
+         "cardName":"Unlock Potential",
+         "cardNumber":76,
+         "set":1
+      },
+      {
+         "cardName":"Ancient Lore",
+         "cardNumber":105,
+         "set":1
+      },
+      {
+         "cardName":"Vault of the Praxis",
+         "cardNumber":480,
+         "set":1
+      },
+      {
+         "cardName":"Xenan Obelisk",
+         "cardNumber":103,
+         "set":1
+      },
+      {
+         "cardName":"Hall of Lost Kings",
+         "cardNumber":121,
+         "set":1
+      },
+      {
+         "cardName":"Justice Sigil",
+         "cardNumber":126,
+         "set":1
+      },
+      {
+         "cardName":"Detain",
+         "cardNumber":133,
+         "set":1
+      },
+      {
+         "cardName":"Finest Hour",
+         "cardNumber":130,
+         "set":1
+      },
+      {
+         "cardName":"Inspire",
+         "cardNumber":129,
+         "set":1
+      },
+      {
+         "cardName":"Crownwatch Longsword",
+         "cardNumber":142,
+         "set":1
+      },
+      {
+         "cardName":"Paladin Oathbook",
+         "cardNumber":140,
+         "set":1
+      },
+      {
+         "cardName":"Rebuke",
+         "cardNumber":141,
+         "set":1
+      },
+      {
+         "cardName":"Tinker Overseer",
+         "cardNumber":138,
+         "set":1
+      },
+      {
+         "cardName":"Auric Sentry",
+         "cardNumber":146,
+         "set":1
+      },
+      {
+         "cardName":"Brightmace Paladin",
+         "cardNumber":147,
+         "set":1
+      },
+      {
+         "cardName":"Emerald Acolyte",
+         "cardNumber":153,
+         "set":1
+      },
+      {
+         "cardName":"Gilded Glaive",
+         "cardNumber":125,
+         "set":1
+      },
+      {
+         "cardName":"Hero of the People",
+         "cardNumber":156,
+         "set":1
+      },
+      {
+         "cardName":"Hooru Envoy",
+         "cardNumber":155,
+         "set":1
+      },
+      {
+         "cardName":"Loyal Watchwing",
+         "cardNumber":150,
+         "set":1
+      },
+      {
+         "cardName":"Order of the Spire",
+         "cardNumber":149,
+         "set":1
+      },
+      {
+         "cardName":"Silverwing Familiar",
+         "cardNumber":152,
+         "set":1
+      },
+      {
+         "cardName":"Treasury Guard",
+         "cardNumber":505,
+         "set":1
+      },
+      {
+         "cardName":"Valkyrie Enforcer",
+         "cardNumber":151,
+         "set":1
+      },
+      {
+         "cardName":"Valorous Stranger",
+         "cardNumber":145,
+         "set":1
+      },
+      {
+         "cardName":"Armorsmith",
+         "cardNumber":163,
+         "set":1
+      },
+      {
+         "cardName":"Auric Runehammer",
+         "cardNumber":166,
+         "set":1
+      },
+      {
+         "cardName":"Bronze Cuirass",
+         "cardNumber":148,
+         "set":1
+      },
+      {
+         "cardName":"Copperhall Recruit",
+         "cardNumber":158,
+         "set":1
+      },
+      {
+         "cardName":"Crownwatch Cavalry",
+         "cardNumber":169,
+         "set":1
+      },
+      {
+         "cardName":"Hammer of Might",
+         "cardNumber":170,
+         "set":1
+      },
+      {
+         "cardName":"Silverwing Avenger",
+         "cardNumber":167,
+         "set":1
+      },
+      {
+         "cardName":"Stalwart Shield",
+         "cardNumber":162,
+         "set":1
+      },
+      {
+         "cardName":"Combrei Magister",
+         "cardNumber":160,
+         "set":1
+      },
+      {
+         "cardName":"Hooru Fledgling",
+         "cardNumber":159,
+         "set":1
+      },
+      {
+         "cardName":"Marshal Ironthorn",
+         "cardNumber":174,
+         "set":1
+      },
+      {
+         "cardName":"Silverwing Commander",
+         "cardNumber":175,
+         "set":1
+      },
+      {
+         "cardName":"Ceremonial Mask",
+         "cardNumber":178,
+         "set":1
+      },
+      {
+         "cardName":"Civic Peacekeeper",
+         "cardNumber":180,
+         "set":1
+      },
+      {
+         "cardName":"Fourth-Tree Elder",
+         "cardNumber":176,
+         "set":1
+      },
+      {
+         "cardName":"Plated Demolisher",
+         "cardNumber":177,
+         "set":1
+      },
+      {
+         "cardName":"Valkyrie Wings",
+         "cardNumber":181,
+         "set":1
+      },
+      {
+         "cardName":"Flight Lieutenant",
+         "cardNumber":184,
+         "set":1
+      },
+      {
+         "cardName":"Rolant's Honor Guard",
+         "cardNumber":183,
+         "set":1
+      },
+      {
+         "cardName":"Rolant, the Iron Fist",
+         "cardNumber":185,
+         "set":1
+      },
+      {
+         "cardName":"Blind Storyteller",
+         "cardNumber":192,
+         "set":1
+      },
+      {
+         "cardName":"Cloudsnake Hatchling",
+         "cardNumber":23,
+         "set":0
+      },
+      {
+         "cardName":"Levitate",
+         "cardNumber":190,
+         "set":1
+      },
+      {
+         "cardName":"Permafrost",
+         "cardNumber":193,
+         "set":1
+      },
+      {
+         "cardName":"Unstable Form",
+         "cardNumber":189,
+         "set":1
+      },
+      {
+         "cardName":"Yeti Spy",
+         "cardNumber":191,
+         "set":1
+      },
+      {
+         "cardName":"Cloudsnake Saddle",
+         "cardNumber":199,
+         "set":1
+      },
+      {
+         "cardName":"East-Wind Herald",
+         "cardNumber":201,
+         "set":1
+      },
+      {
+         "cardName":"Eilyn's Favor",
+         "cardNumber":24,
+         "set":0
+      },
+      {
+         "cardName":"Herald's Song",
+         "cardNumber":196,
+         "set":1
+      },
+      {
+         "cardName":"Static Bolt",
+         "cardNumber":194,
+         "set":1
+      },
+      {
+         "cardName":"Violent Gust",
+         "cardNumber":205,
+         "set":1
+      },
+      {
+         "cardName":"Whispering Wind",
+         "cardNumber":202,
+         "set":1
+      },
+      {
+         "cardName":"Wild Cloudsnake",
+         "cardNumber":195,
+         "set":1
+      },
+      {
+         "cardName":"Yeti Snowslinger",
+         "cardNumber":203,
+         "set":1
+      },
+      {
+         "cardName":"Cobalt Acolyte",
+         "cardNumber":212,
+         "set":1
+      },
+      {
+         "cardName":"Flash Freeze",
+         "cardNumber":209,
+         "set":1
+      },
+      {
+         "cardName":"Ice Sprite",
+         "cardNumber":214,
+         "set":1
+      },
+      {
+         "cardName":"Icebreaker",
+         "cardNumber":216,
+         "set":1
+      },
+      {
+         "cardName":"Skysnapper",
+         "cardNumber":208,
+         "set":1
+      },
+      {
+         "cardName":"Thunderbird",
+         "cardNumber":27,
+         "set":0
+      },
+      {
+         "cardName":"Wump, Party Starter",
+         "cardNumber":511,
+         "set":1
+      },
+      {
+         "cardName":"Deranged Dinomancer",
+         "cardNumber":223,
+         "set":1
+      },
+      {
+         "cardName":"Jarrall's Frostkin",
+         "cardNumber":220,
+         "set":1
+      },
+      {
+         "cardName":"Rain of Frogs",
+         "cardNumber":221,
+         "set":1
+      },
+      {
+         "cardName":"Serpent Trainer",
+         "cardNumber":219,
+         "set":1
+      },
+      {
+         "cardName":"Soaring Stranger",
+         "cardNumber":229,
+         "set":1
+      },
+      {
+         "cardName":"Stormcaller",
+         "cardNumber":224,
+         "set":1
+      },
+      {
+         "cardName":"Yeti Troublemaker",
+         "cardNumber":222,
+         "set":1
+      },
+      {
+         "cardName":"Aerial Ace",
+         "cardNumber":235,
+         "set":1
+      },
+      {
+         "cardName":"Crystallize",
+         "cardNumber":232,
+         "set":1
+      },
+      {
+         "cardName":"Elysian Trailblazer",
+         "cardNumber":228,
+         "set":1
+      },
+      {
+         "cardName":"Jotun Hurler",
+         "cardNumber":227,
+         "set":1
+      },
+      {
+         "cardName":"Jotun Warrior",
+         "cardNumber":226,
+         "set":1
+      },
+      {
+         "cardName":"Magus of the Mist",
+         "cardNumber":233,
+         "set":1
+      },
+      {
+         "cardName":"Primal Incarnation",
+         "cardNumber":30,
+         "set":0
+      },
+      {
+         "cardName":"Psionic Savant",
+         "cardNumber":360,
+         "set":1
+      },
+      {
+         "cardName":"Skycrag Wyvarch",
+         "cardNumber":247,
+         "set":1
+      },
+      {
+         "cardName":"West-Wind Herald",
+         "cardNumber":231,
+         "set":1
+      },
+      {
+         "cardName":"Hatchery Hunter",
+         "cardNumber":237,
+         "set":1
+      },
+      {
+         "cardName":"North-Wind Herald",
+         "cardNumber":240,
+         "set":1
+      },
+      {
+         "cardName":"Sapphire Dragon",
+         "cardNumber":236,
+         "set":1
+      },
+      {
+         "cardName":"Araktodon",
+         "cardNumber":238,
+         "set":1
+      },
+      {
+         "cardName":"Mistveil Drake",
+         "cardNumber":242,
+         "set":1
+      },
+      {
+         "cardName":"Rimescale Draconus",
+         "cardNumber":246,
+         "set":1
+      },
+      {
+         "cardName":"Eilyn, Queen of the Wilds",
+         "cardNumber":245,
+         "set":1
+      },
+      {
+         "cardName":"Scourge of Frosthome",
+         "cardNumber":248,
+         "set":1
+      },
+      {
+         "cardName":"Amethyst Monument",
+         "cardNumber":426,
+         "set":1
+      },
+      {
+         "cardName":"Blood Beetle",
+         "cardNumber":260,
+         "set":1
+      },
+      {
+         "cardName":"Direfang Spider",
+         "cardNumber":256,
+         "set":1
+      },
+      {
+         "cardName":"Ghostform",
+         "cardNumber":258,
+         "set":1
+      },
+      {
+         "cardName":"Knifejack",
+         "cardNumber":257,
+         "set":1
+      },
+      {
+         "cardName":"Slumbering Stone",
+         "cardNumber":255,
+         "set":1
+      },
+      {
+         "cardName":"Argenport Instigator",
+         "cardNumber":268,
+         "set":1
+      },
+      {
+         "cardName":"Cabal Cutthroat",
+         "cardNumber":297,
+         "set":1
+      },
+      {
+         "cardName":"Dark Wisp",
+         "cardNumber":264,
+         "set":1
+      },
+      {
+         "cardName":"Lethrai Ranger",
+         "cardNumber":270,
+         "set":1
+      },
+      {
+         "cardName":"Scavenging Vulture",
+         "cardNumber":265,
+         "set":1
+      },
+      {
+         "cardName":"Sporefolk",
+         "cardNumber":262,
+         "set":1
+      },
+      {
+         "cardName":"Vampire Bat",
+         "cardNumber":33,
+         "set":0
+      },
+      {
+         "cardName":"Vara's Favor",
+         "cardNumber":35,
+         "set":0
+      },
+      {
+         "cardName":"Venomfang Dagger",
+         "cardNumber":263,
+         "set":1
+      },
+      {
+         "cardName":"Amethyst Acolyte",
+         "cardNumber":276,
+         "set":1
+      },
+      {
+         "cardName":"Beastcaller's Amulet",
+         "cardNumber":282,
+         "set":1
+      },
+      {
+         "cardName":"Blackguard Sidearm",
+         "cardNumber":266,
+         "set":1
+      },
+      {
+         "cardName":"Desperado",
+         "cardNumber":273,
+         "set":1
+      },
+      {
+         "cardName":"Direwood Beastcaller",
+         "cardNumber":271,
+         "set":1
+      },
+      {
+         "cardName":"Lethrai Nightblade",
+         "cardNumber":279,
+         "set":1
+      },
+      {
+         "cardName":"Lifedrinker",
+         "cardNumber":275,
+         "set":1
+      },
+      {
+         "cardName":"Ravenous Thornbeast",
+         "cardNumber":278,
+         "set":1
+      },
+      {
+         "cardName":"Reinforce",
+         "cardNumber":136,
+         "set":1
+      },
+      {
+         "cardName":"Rolant's Favor",
+         "cardNumber":18,
+         "set":0
+      },
+      {
+         "cardName":"Vanquish",
+         "cardNumber":143,
+         "set":1
+      },
+      {
+         "cardName":"Mark of Shame",
+         "cardNumber":165,
+         "set":1
+      },
+      {
+         "cardName":"Privilege of Rank",
+         "cardNumber":157,
+         "set":1
+      },
+      {
+         "cardName":"Copperhall Blessing",
+         "cardNumber":168,
+         "set":1
+      },
+      {
+         "cardName":"Mantle of Justice",
+         "cardNumber":21,
+         "set":0
+      },
+      {
+         "cardName":"Treasury Gate",
+         "cardNumber":164,
+         "set":1
+      },
+      {
+         "cardName":"Harsh Rule",
+         "cardNumber":172,
+         "set":1
+      },
+      {
+         "cardName":"Mithril Mace",
+         "cardNumber":171,
+         "set":1
+      },
+      {
+         "cardName":"Augmented Form",
+         "cardNumber":182,
+         "set":1
+      },
+      {
+         "cardName":"Sword of the Sky King",
+         "cardNumber":186,
+         "set":1
+      },
+      {
+         "cardName":"Primal Sigil",
+         "cardNumber":187,
+         "set":1
+      },
+      {
+         "cardName":"Backlash",
+         "cardNumber":200,
+         "set":1
+      },
+      {
+         "cardName":"Lightning Storm",
+         "cardNumber":206,
+         "set":1
+      },
+      {
+         "cardName":"Lightning Strike",
+         "cardNumber":197,
+         "set":1
+      },
+      {
+         "cardName":"Second Sight",
+         "cardNumber":207,
+         "set":1
+      },
+      {
+         "cardName":"Eye of Winter",
+         "cardNumber":210,
+         "set":1
+      },
+      {
+         "cardName":"Mirror Image",
+         "cardNumber":217,
+         "set":1
+      },
+      {
+         "cardName":"Polymorph",
+         "cardNumber":211,
+         "set":1
+      },
+      {
+         "cardName":"Wisdom of the Elders",
+         "cardNumber":218,
+         "set":1
+      },
+      {
+         "cardName":"Celestial Omen",
+         "cardNumber":241,
+         "set":1
+      },
+      {
+         "cardName":"Scouting Party",
+         "cardNumber":488,
+         "set":1
+      },
+      {
+         "cardName":"Strength of the Pack",
+         "cardNumber":367,
+         "set":1
+      },
+      {
+         "cardName":"Channel the Tempest",
+         "cardNumber":244,
+         "set":1
+      },
+      {
+         "cardName":"Shadow Sigil",
+         "cardNumber":249,
+         "set":1
+      },
+      {
+         "cardName":"Dark Return",
+         "cardNumber":250,
+         "set":1
+      },
+      {
+         "cardName":"Pilfer",
+         "cardNumber":254,
+         "set":1
+      },
+      {
+         "cardName":"Sabotage",
+         "cardNumber":252,
+         "set":1
+      },
+      {
+         "cardName":"Suffocate",
+         "cardNumber":251,
+         "set":1
+      },
+      {
+         "cardName":"Annihilate",
+         "cardNumber":269,
+         "set":1
+      },
+      {
+         "cardName":"Devour",
+         "cardNumber":261,
+         "set":1
+      },
+      {
+         "cardName":"Devouring Shadow",
+         "cardNumber":36,
+         "set":0
+      },
+      {
+         "cardName":"Execute",
+         "cardNumber":277,
+         "set":1
+      },
+      {
+         "cardName":"Madness",
+         "cardNumber":267,
+         "set":1
+      },
+      {
+         "cardName":"Plague",
+         "cardNumber":274,
+         "set":1
+      },
+      {
+         "cardName":"Shadowlands Guide",
+         "cardNumber":280,
+         "set":1
+      },
+      {
+         "cardName":"Torrent of Spiders",
+         "cardNumber":272,
+         "set":1
+      },
+      {
+         "cardName":"Xenan Destroyer",
+         "cardNumber":281,
+         "set":1
+      },
+      {
+         "cardName":"Back-Alley Bouncer",
+         "cardNumber":284,
+         "set":1
+      },
+      {
+         "cardName":"Cabal Recruiter",
+         "cardNumber":283,
+         "set":1
+      },
+      {
+         "cardName":"Impending Doom",
+         "cardNumber":286,
+         "set":1
+      },
+      {
+         "cardName":"Lethrai Falchion",
+         "cardNumber":285,
+         "set":1
+      },
+      {
+         "cardName":"Soul Collector",
+         "cardNumber":291,
+         "set":1
+      },
+      {
+         "cardName":"Stonescar Magus",
+         "cardNumber":288,
+         "set":1
+      },
+      {
+         "cardName":"Ashara, the Deadshot",
+         "cardNumber":295,
+         "set":1
+      },
+      {
+         "cardName":"Lurking Sanguar",
+         "cardNumber":293,
+         "set":1
+      },
+      {
+         "cardName":"Merciless Stranger",
+         "cardNumber":111,
+         "set":1
+      },
+      {
+         "cardName":"Argenport Ringmaster",
+         "cardNumber":300,
+         "set":1
+      },
+      {
+         "cardName":"Direwood Rampager",
+         "cardNumber":301,
+         "set":1
+      },
+      {
+         "cardName":"Horsesnatcher Bat",
+         "cardNumber":304,
+         "set":1
+      },
+      {
+         "cardName":"Spirit Drain",
+         "cardNumber":302,
+         "set":1
+      },
+      {
+         "cardName":"Venomspine Hydra",
+         "cardNumber":305,
+         "set":1
+      },
+      {
+         "cardName":"Touch of the Umbren",
+         "cardNumber":308,
+         "set":1
+      },
+      {
+         "cardName":"Vara, Fate-Touched",
+         "cardNumber":307,
+         "set":1
+      },
+      {
+         "cardName":"The Last Word",
+         "cardNumber":309,
+         "set":1
+      },
+      {
+         "cardName":"Praxis Banner",
+         "cardNumber":59,
+         "set":0
+      },
+      {
+         "cardName":"Seat of Impulse",
+         "cardNumber":54,
+         "set":0
+      },
+      {
+         "cardName":"Rakano Banner",
+         "cardNumber":427,
+         "set":1
+      },
+      {
+         "cardName":"Seat of Glory",
+         "cardNumber":56,
+         "set":0
+      },
+      {
+         "cardName":"Fearless Nomad",
+         "cardNumber":311,
+         "set":1
+      },
+      {
+         "cardName":"Champion of Glory",
+         "cardNumber":314,
+         "set":1
+      },
+      {
+         "cardName":"Rakano Artisan",
+         "cardNumber":312,
+         "set":1
+      },
+      {
+         "cardName":"Crownwatch Deserter",
+         "cardNumber":316,
+         "set":1
+      },
+      {
+         "cardName":"Ijin, Imperial Armorer",
+         "cardNumber":326,
+         "set":1
+      },
+      {
+         "cardName":"Sword of Icaria",
+         "cardNumber":315,
+         "set":1
+      },
+      {
+         "cardName":"Battleblur Centaur",
+         "cardNumber":319,
+         "set":1
+      },
+      {
+         "cardName":"Longhorn Sergeant",
+         "cardNumber":318,
+         "set":1
+      },
+      {
+         "cardName":"Navani, Warsinger",
+         "cardNumber":323,
+         "set":1
+      },
+      {
+         "cardName":"Renegade Valkyrie",
+         "cardNumber":321,
+         "set":1
+      },
+      {
+         "cardName":"Righteous Fury",
+         "cardNumber":322,
+         "set":1
+      },
+      {
+         "cardName":"Deepforged Plate",
+         "cardNumber":317,
+         "set":1
+      },
+      {
+         "cardName":"Field Captain",
+         "cardNumber":324,
+         "set":1
+      },
+      {
+         "cardName":"Ferocious Stranger",
+         "cardNumber":327,
+         "set":1
+      },
+      {
+         "cardName":"Icaria, the Liberator",
+         "cardNumber":329,
+         "set":1
+      },
+      {
+         "cardName":"Combrei Banner",
+         "cardNumber":424,
+         "set":1
+      },
+      {
+         "cardName":"Seat of Progress",
+         "cardNumber":58,
+         "set":0
+      },
+      {
+         "cardName":"Awakened Student",
+         "cardNumber":331,
+         "set":1
+      },
+      {
+         "cardName":"Desert Marshal",
+         "cardNumber":332,
+         "set":1
+      },
+      {
+         "cardName":"Combrei Healer",
+         "cardNumber":333,
+         "set":1
+      },
+      {
+         "cardName":"Knight-Chancellor Siraf",
+         "cardNumber":335,
+         "set":1
+      },
+      {
+         "cardName":"Stand Together",
+         "cardNumber":334,
+         "set":1
+      },
+      {
+         "cardName":"Vodakhan's Staff",
+         "cardNumber":336,
+         "set":1
+      },
+      {
+         "cardName":"Copperhall Elite",
+         "cardNumber":340,
+         "set":1
+      },
+      {
+         "cardName":"Enlightened Stranger",
+         "cardNumber":337,
+         "set":1
+      },
+      {
+         "cardName":"Karmic Guardian",
+         "cardNumber":341,
+         "set":1
+      },
+      {
+         "cardName":"The Great Parliament",
+         "cardNumber":338,
+         "set":1
+      },
+      {
+         "cardName":"Reality Warden",
+         "cardNumber":343,
+         "set":1
+      },
+      {
+         "cardName":"Champion of Progress",
+         "cardNumber":345,
+         "set":1
+      },
+      {
+         "cardName":"Minotaur Ambassador",
+         "cardNumber":346,
+         "set":1
+      },
+      {
+         "cardName":"Vodakhan, Temple Speaker",
+         "cardNumber":347,
+         "set":1
+      },
+      {
+         "cardName":"A New Tomorrow",
+         "cardNumber":348,
+         "set":1
+      },
+      {
+         "cardName":"Elysian Banner",
+         "cardNumber":421,
+         "set":1
+      },
+      {
+         "cardName":"Seat of Wisdom",
+         "cardNumber":63,
+         "set":0
+      },
+      {
+         "cardName":"Call the Ancients",
+         "cardNumber":350,
+         "set":1
+      },
+      {
+         "cardName":"Accelerated Evolution",
+         "cardNumber":351,
+         "set":1
+      },
+      {
+         "cardName":"Storm Lynx",
+         "cardNumber":353,
+         "set":1
+      },
+      {
+         "cardName":"Amaran Camel",
+         "cardNumber":357,
+         "set":1
+      },
+      {
+         "cardName":"False Prince",
+         "cardNumber":356,
+         "set":1
+      },
+      {
+         "cardName":"Pteriax Hatchling",
+         "cardNumber":354,
+         "set":1
+      },
+      {
+         "cardName":"Nesting Avisaur",
+         "cardNumber":225,
+         "set":1
+      },
+      {
+         "cardName":"Cirso, the Great Glutton",
+         "cardNumber":362,
+         "set":1
+      },
+      {
+         "cardName":"Hunting Pteriax",
+         "cardNumber":363,
+         "set":1
+      },
+      {
+         "cardName":"Fortunate Stranger",
+         "cardNumber":364,
+         "set":1
+      },
+      {
+         "cardName":"Curiox, the Collector",
+         "cardNumber":366,
+         "set":1
+      },
+      {
+         "cardName":"Hooru Banner",
+         "cardNumber":57,
+         "set":0
+      },
+      {
+         "cardName":"Seat of Order",
+         "cardNumber":51,
+         "set":0
+      },
+      {
+         "cardName":"Argenport Banner",
+         "cardNumber":64,
+         "set":0
+      },
+      {
+         "cardName":"Seat of Vengeance",
+         "cardNumber":55,
+         "set":0
+      },
+      {
+         "cardName":"Seat of Fury",
+         "cardNumber":53,
+         "set":0
+      },
+      {
+         "cardName":"Skycrag Banner",
+         "cardNumber":65,
+         "set":0
+      },
+      {
+         "cardName":"Feln Banner",
+         "cardNumber":417,
+         "set":1
+      },
+      {
+         "cardName":"Seat of Cunning",
+         "cardNumber":62,
+         "set":0
+      },
+      {
+         "cardName":"Twilight Raptor",
+         "cardNumber":379,
+         "set":1
+      },
+      {
+         "cardName":"Gorgon Swiftblade",
+         "cardNumber":377,
+         "set":1
+      },
+      {
+         "cardName":"Grim Stranger",
+         "cardNumber":372,
+         "set":1
+      },
+      {
+         "cardName":"Haunting Scream",
+         "cardNumber":374,
+         "set":1
+      },
+      {
+         "cardName":"Feln Bloodcaster",
+         "cardNumber":386,
+         "set":1
+      },
+      {
+         "cardName":"Gorgon Fanatic",
+         "cardNumber":375,
+         "set":1
+      },
+      {
+         "cardName":"Midnight Gale",
+         "cardNumber":378,
+         "set":1
+      },
+      {
+         "cardName":"Recurring Nightmare",
+         "cardNumber":382,
+         "set":1
+      },
+      {
+         "cardName":"Trickster's Cloak",
+         "cardNumber":369,
+         "set":1
+      },
+      {
+         "cardName":"Champion of Cunning",
+         "cardNumber":371,
+         "set":1
+      },
+      {
+         "cardName":"Black-Sky Harbinger",
+         "cardNumber":385,
+         "set":1
+      },
+      {
+         "cardName":"Nightmaw, Sight Unseen",
+         "cardNumber":383,
+         "set":1
+      },
+      {
+         "cardName":"Snowcrush Animist",
+         "cardNumber":384,
+         "set":1
+      },
+      {
+         "cardName":"Seat of Chaos",
+         "cardNumber":60,
+         "set":0
+      },
+      {
+         "cardName":"Stonescar Banner",
+         "cardNumber":419,
+         "set":1
+      },
+      {
+         "cardName":"Hair-Trigger Stranger",
+         "cardNumber":253,
+         "set":1
+      },
+      {
+         "cardName":"Obsidian Golem",
+         "cardNumber":398,
+         "set":1
+      },
+      {
+         "cardName":"Bloodrite Kalis",
+         "cardNumber":397,
+         "set":1
+      },
+      {
+         "cardName":"Bandit Queen",
+         "cardNumber":389,
+         "set":1
+      },
+      {
+         "cardName":"Statuary Maiden",
+         "cardNumber":387,
+         "set":1
+      },
+      {
+         "cardName":"Runic Revolver",
+         "cardNumber":404,
+         "set":1
+      },
+      {
+         "cardName":"Scraptank",
+         "cardNumber":391,
+         "set":1
+      },
+      {
+         "cardName":"Warband Chieftain",
+         "cardNumber":395,
+         "set":1
+      },
+      {
+         "cardName":"Infernal Tyrant",
+         "cardNumber":390,
+         "set":1
+      },
+      {
+         "cardName":"Stonescar Leviathan",
+         "cardNumber":403,
+         "set":1
+      },
+      {
+         "cardName":"Voprex, the Great Ruin",
+         "cardNumber":400,
+         "set":1
+      },
+      {
+         "cardName":"Seat of Mystery",
+         "cardNumber":61,
+         "set":0
+      },
+      {
+         "cardName":"Xenan Banner",
+         "cardNumber":52,
+         "set":0
+      },
+      {
+         "cardName":"Combrei Stranger",
+         "cardNumber":410,
+         "set":1
+      },
+      {
+         "cardName":"Daze",
+         "cardNumber":414,
+         "set":1
+      },
+      {
+         "cardName":"Elysian Stranger",
+         "cardNumber":412,
+         "set":1
+      },
+      {
+         "cardName":"Feln Stranger",
+         "cardNumber":409,
+         "set":1
+      },
+      {
+         "cardName":"Rakano Stranger",
+         "cardNumber":411,
+         "set":1
+      },
+      {
+         "cardName":"Stonescar Stranger",
+         "cardNumber":413,
+         "set":1
+      },
+      {
+         "cardName":"Forsworn Stranger",
+         "cardNumber":416,
+         "set":1
+      },
+      {
+         "cardName":"Scheme",
+         "cardNumber":213,
+         "set":1
+      },
+      {
+         "cardName":"Deathstrike",
+         "cardNumber":290,
+         "set":1
+      },
+      {
+         "cardName":"Grasping at Shadows",
+         "cardNumber":292,
+         "set":1
+      },
+      {
+         "cardName":"Oblivion Spike",
+         "cardNumber":294,
+         "set":1
+      },
+      {
+         "cardName":"Whispers in the Void",
+         "cardNumber":303,
+         "set":1
+      },
+      {
+         "cardName":"The Witching Hour",
+         "cardNumber":310,
+         "set":1
+      },
+      {
+         "cardName":"Rise to the Challenge",
+         "cardNumber":320,
+         "set":1
+      },
+      {
+         "cardName":"Starsteel Daisho",
+         "cardNumber":328,
+         "set":1
+      },
+      {
+         "cardName":"Safe Return",
+         "cardNumber":330,
+         "set":1
+      },
+      {
+         "cardName":"Stronghold's Visage",
+         "cardNumber":339,
+         "set":1
+      },
+      {
+         "cardName":"Twinning Ritual",
+         "cardNumber":79,
+         "set":1
+      },
+      {
+         "cardName":"Crown of Possibilities",
+         "cardNumber":355,
+         "set":1
+      },
+      {
+         "cardName":"Crystalline Chalice",
+         "cardNumber":359,
+         "set":1
+      },
+      {
+         "cardName":"Feln Cauldron",
+         "cardNumber":380,
+         "set":1
+      },
+      {
+         "cardName":"Feeding Time",
+         "cardNumber":381,
+         "set":1
+      },
+      {
+         "cardName":"Spell Swipe",
+         "cardNumber":373,
+         "set":1
+      },
+      {
+         "cardName":"Combust",
+         "cardNumber":392,
+         "set":1
+      },
+      {
+         "cardName":"Treachery",
+         "cardNumber":394,
+         "set":1
+      },
+      {
+         "cardName":"Brimstone Altar",
+         "cardNumber":399,
+         "set":1
+      },
+      {
+         "cardName":"Black Iron Manacles",
+         "cardNumber":388,
+         "set":1
+      },
+      {
+         "cardName":"Smuggler's Stash",
+         "cardNumber":396,
+         "set":1
+      },
+      {
+         "cardName":"Diplomatic Seal",
+         "cardNumber":425,
+         "set":1
+      },
+      {
+         "cardName":"Spiked Helm",
+         "cardNumber":406,
+         "set":1
+      },
+      {
+         "cardName":"Worn Shield",
+         "cardNumber":407,
+         "set":1
+      },
+      {
+         "cardName":"Alchemical Blast",
+         "cardNumber":415,
+         "set":1
+      },
+      {
+         "cardName":"Magmahound",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Spiteling",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"The Tormentor",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Stone Cudgel",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Obsidian Armor",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Serpent Hatchling",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Grenadin",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Frog",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Sky Serpent",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Pig",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Carnosaur",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Scorpion",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Locust",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Sandcrawler",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Vengeful Gargoyle",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Rhinarc",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Puma",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Wisp",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Gemblade",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Firebomb",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Direwood Beast",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Illusionary Dragon",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Sentinel",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Dragon's Eye",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Owl",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Pale Rider",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Pale Rider",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Pale Rider",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Pale Rider",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Titan",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Mithril Armor",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Iron Sword",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Shimmerpack",
+         "cardNumber":365,
+         "set":1
+      },
+      {
+         "cardName":"Water of Life",
+         "cardNumber":68,
+         "set":1
+      },
+      {
+         "cardName":"Sand Warrior",
+         "cardNumber":64,
+         "set":1
+      },
+      {
+         "cardName":"Excavate",
+         "cardNumber":71,
+         "set":1
+      },
+      {
+         "cardName":"Calderan Gunsmith",
+         "cardNumber":46,
+         "set":1
+      },
+      {
+         "cardName":"Fevered Scout",
+         "cardNumber":512,
+         "set":1
+      },
+      {
+         "cardName":"Find the Way",
+         "cardNumber":513,
+         "set":1
+      },
+      {
+         "cardName":"Throne Warden",
+         "cardNumber":514,
+         "set":1
+      },
+      {
+         "cardName":"Borderlands Waykeeper",
+         "cardNumber":517,
+         "set":1
+      },
+      {
+         "cardName":"Xenan Cultist",
+         "cardNumber":516,
+         "set":1
+      },
+      {
+         "cardName":"Avisaur Patriarch",
+         "cardNumber":13,
+         "set":1001
+      },
+      {
+         "cardName":"Bait",
+         "cardNumber":2,
+         "set":1001
+      },
+      {
+         "cardName":"Cabal Spymaster",
+         "cardNumber":14,
+         "set":1001
+      },
+      {
+         "cardName":"Cliffside Porter",
+         "cardNumber":7,
+         "set":1001
+      },
+      {
+         "cardName":"Combrei Emissary",
+         "cardNumber":12,
+         "set":1001
+      },
+      {
+         "cardName":"Copperhall Bailiff",
+         "cardNumber":5,
+         "set":1001
+      },
+      {
+         "cardName":"Hibernating Behemoth",
+         "cardNumber":4,
+         "set":1001
+      },
+      {
+         "cardName":"Hone",
+         "cardNumber":6,
+         "set":1001
+      },
+      {
+         "cardName":"Jekk, the Bounty Hunter",
+         "cardNumber":11,
+         "set":1001
+      },
+      {
+         "cardName":"Nictotraxian",
+         "cardNumber":16,
+         "set":1001
+      },
+      {
+         "cardName":"Passage of Eons",
+         "cardNumber":3,
+         "set":1001
+      },
+      {
+         "cardName":"Praxis Outlaw",
+         "cardNumber":1,
+         "set":1001
+      },
+      {
+         "cardName":"Quarry",
+         "cardNumber":15,
+         "set":1001
+      },
+      {
+         "cardName":"Shadowlands Feaster",
+         "cardNumber":10,
+         "set":1001
+      },
+      {
+         "cardName":"Stray into Shadow",
+         "cardNumber":9,
+         "set":1001
+      },
+      {
+         "cardName":"Tyrannize",
+         "cardNumber":8,
+         "set":1001
+      },
+      {
+         "cardName":"Honed Blade",
+         "cardNumber":-1,
+         "set":1001
+      },
+      {
+         "cardName":"Cabal Countess",
+         "cardNumber":506,
+         "set":1
+      },
+      {
+         "cardName":"Azindel's Gift",
+         "cardNumber":306,
+         "set":1
+      },
+      {
+         "cardName":"Champion of Chaos",
+         "cardNumber":402,
+         "set":1
+      },
+      {
+         "cardName":"Champion of Wisdom",
+         "cardNumber":358,
+         "set":1
+      },
+      {
+         "cardName":"Cobalt Monument",
+         "cardNumber":418,
+         "set":1
+      },
+      {
+         "cardName":"Crownwatch Paladin",
+         "cardNumber":139,
+         "set":1
+      },
+      {
+         "cardName":"Explorer Emeritus",
+         "cardNumber":361,
+         "set":1
+      },
+      {
+         "cardName":"Frontier Jito",
+         "cardNumber":9,
+         "set":1
+      },
+      {
+         "cardName":"Jarrall Iceheart",
+         "cardNumber":239,
+         "set":1
+      },
+      {
+         "cardName":"Scaly Gruan",
+         "cardNumber":215,
+         "set":1
+      },
+      {
+         "cardName":"Soulfire Drake",
+         "cardNumber":47,
+         "set":1
+      },
+      {
+         "cardName":"Spire Chaplain",
+         "cardNumber":154,
+         "set":1
+      },
+      {
+         "cardName":"Staff of Stories",
+         "cardNumber":234,
+         "set":1
+      },
+      {
+         "cardName":"Steward of the Past",
+         "cardNumber":287,
+         "set":1
+      },
+      {
+         "cardName":"Subvert",
+         "cardNumber":289,
+         "set":1
+      },
+      {
+         "cardName":"Thunderstrike Dragon",
+         "cardNumber":243,
+         "set":1
+      },
+      {
+         "cardName":"Tundra Explorer",
+         "cardNumber":204,
+         "set":1
+      },
+      {
+         "cardName":"Umbren Reaper",
+         "cardNumber":299,
+         "set":1
+      },
+      {
+         "cardName":"Windshaper",
+         "cardNumber":230,
+         "set":1
+      },
+      {
+         "cardName":"Withering Witch",
+         "cardNumber":368,
+         "set":1
+      },
+      {
+         "cardName":"Stormdancer",
+         "cardNumber":-1,
+         "set":1
+      },
+      {
+         "cardName":"Azindel, the Wayfinder",
+         "cardNumber":518,
+         "set":1
+      },
+      {
+         "cardName":"Rilgon, Hooru Operative",
+         "cardNumber":519,
+         "set":1
+      },
+      {
+         "cardName":"Arcanum Monitor",
+         "cardNumber":520,
+         "set":1
+      },
+      {
+         "cardName":"Blazing Renegade",
+         "cardNumber":4,
+         "set":0
+      },
+      {
+         "cardName":"Oni Striker",
+         "cardNumber":44,
+         "set":1
+      },
+      {
+         "cardName":"Alpine Tracker",
+         "cardNumber":522,
+         "set":1
+      },
+      {
+         "cardName":"Oathbreaker",
+         "cardNumber":521,
+         "set":1
+      },
+      {
+         "cardName":"Rapid Shot",
+         "cardNumber":259,
+         "set":1
+      }
+   ]
+}

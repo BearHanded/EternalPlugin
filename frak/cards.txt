@@ -1,0 +1,506 @@
+Granite Monument
+Charchain Flail
+Flame Blast
+Forge Wolf
+Grenadin Drone
+Oni Ronin
+Pyroknight
+Ruthless Stranger
+Ticking Grenadin
+Warhelm
+Bladekin Apprentice
+Brazen Daredevil
+Ornate Katana
+Pyre Adept
+Rakano Outlaw
+Rampage
+Song of War
+Censari Brigand
+Granite Acolyte
+Oni Quartermaster
+Rakano Flagbearer
+Rebel Sharpshooter
+Shogun's Scepter
+Centaur Outrider
+Furnace Mage
+Guerrilla Fighter
+Morningstar
+Outlands Sniper
+Rebel Illuminator
+Recogulator
+Steelfang Chakram
+Centaur Raidleader
+Dusthoof Brawler
+Infernus
+Obliterate
+Shogun of the Wastes
+Crowd Favorite
+Frontline Cyclops
+General Izalio
+Hellfire Rifle
+Stonescar Maul
+Worldpyre Phoenix
+Claw of the First Dragon
+Steelbound Dragon
+Kaleb, Uncrowned Prince
+Lavablood Goliath
+Amber Monument
+Copper Conduit
+Humbug
+Infinite Hourglass
+Initiate of the Sands
+Ornamental Daggers
+Predator's Instinct
+Sanctuary Priest
+Silence
+Accelerate
+Bold Adventurer
+Ephemeral Wisp
+Friendly Wisp
+Sauropod Wrangler
+Talir's Favored
+Temple Scribe
+Voice of the Speaker
+Ageless Mentor
+Amber Acolyte
+Clockroach
+Dawnwalker
+Determined Stranger
+Dispel
+Dune Phantom
+Scorpion Wasp
+Healer's Cloak
+Horned Vorlunk
+Marisen's Disciple
+Praxis Displacer
+Sandstorm Titan
+Steward of Prophecy
+Timekeeper
+Towertop Patrol
+Xenan Guardian
+Elysian Pathfinder
+Idol of Destran
+Lumen Defender
+Reliquary Raider
+Striking Snake Formation
+Towering Terrazon
+Twinbrood Sauropod
+Divining Rod
+Lumen Shepherd
+Mystic Ascendant
+Predatory Carnosaur
+Ancient Terrazon
+Dormant Sentinel
+Pillar of Amar
+Marisen, the Eldest
+Talir, Who Sees Beyond
+Emerald Monument
+District Infantry
+Elder's Feather
+Protect
+Steadfast Deputy
+Tinker Apprentice
+Valkyrie Aspirant
+Argenport Soldier
+Eager Owlet
+Minotaur Grunt
+Seek Power
+Fire Sigil
+Trail Stories
+Heavy Axe
+Light the Fuse
+Ruin
+Temper
+Torch
+Kaleb's Favor
+Piercing Shot
+Assembly Line
+Rally
+Burn Out
+Cloud of Ash
+Magma Javelin
+Flash Fire
+Time Sigil
+Slow
+Refresh
+Synchronized Strike
+Teleport
+Decay
+Oasis Sanctuary
+Secret Pages
+Unlock Potential
+Ancient Lore
+Vault of the Praxis
+Xenan Obelisk
+Hall of Lost Kings
+Justice Sigil
+Detain
+Finest Hour
+Inspire
+Crownwatch Longsword
+Paladin Oathbook
+Rebuke
+Tinker Overseer
+Auric Sentry
+Brightmace Paladin
+Emerald Acolyte
+Gilded Glaive
+Hero of the People
+Hooru Envoy
+Loyal Watchwing
+Order of the Spire
+Silverwing Familiar
+Treasury Guard
+Valkyrie Enforcer
+Valorous Stranger
+Armorsmith
+Auric Runehammer
+Bronze Cuirass
+Copperhall Recruit
+Crownwatch Cavalry
+Hammer of Might
+Silverwing Avenger
+Stalwart Shield
+Combrei Magister
+Hooru Fledgling
+Marshal Ironthorn
+Silverwing Commander
+Ceremonial Mask
+Civic Peacekeeper
+Fourth-Tree Elder
+Plated Demolisher
+Valkyrie Wings
+Flight Lieutenant
+Rolant's Honor Guard
+Rolant, the Iron Fist
+Blind Storyteller
+Cloudsnake Hatchling
+Levitate
+Permafrost
+Unstable Form
+Yeti Spy
+Cloudsnake Saddle
+East-Wind Herald
+Eilyn's Favor
+Herald's Song
+Static Bolt
+Violent Gust
+Whispering Wind
+Wild Cloudsnake
+Yeti Snowslinger
+Cobalt Acolyte
+Flash Freeze
+Ice Sprite
+Icebreaker
+Skysnapper
+Thunderbird
+Wump, Party Starter
+Deranged Dinomancer
+Jarrall's Frostkin
+Rain of Frogs
+Serpent Trainer
+Soaring Stranger
+Stormcaller
+Yeti Troublemaker
+Aerial Ace
+Crystallize
+Elysian Trailblazer
+Jotun Hurler
+Jotun Warrior
+Magus of the Mist
+Primal Incarnation
+Psionic Savant
+Skycrag Wyvarch
+West-Wind Herald
+Hatchery Hunter
+North-Wind Herald
+Sapphire Dragon
+Araktodon
+Mistveil Drake
+Rimescale Draconus
+Eilyn, Queen of the Wilds
+Scourge of Frosthome
+Amethyst Monument
+Blood Beetle
+Direfang Spider
+Ghostform
+Knifejack
+Slumbering Stone
+Argenport Instigator
+Cabal Cutthroat
+Dark Wisp
+Lethrai Ranger
+Scavenging Vulture
+Sporefolk
+Vampire Bat
+Vara's Favor
+Venomfang Dagger
+Amethyst Acolyte
+Beastcaller's Amulet
+Blackguard Sidearm
+Desperado
+Direwood Beastcaller
+Lethrai Nightblade
+Lifedrinker
+Ravenous Thornbeast
+Reinforce
+Rolant's Favor
+Vanquish
+Mark of Shame
+Privilege of Rank
+Copperhall Blessing
+Mantle of Justice
+Treasury Gate
+Harsh Rule
+Mithril Mace
+Augmented Form
+Sword of the Sky King
+Primal Sigil
+Backlash
+Lightning Storm
+Lightning Strike
+Second Sight
+Eye of Winter
+Mirror Image
+Polymorph
+Wisdom of the Elders
+Celestial Omen
+Scouting Party
+Strength of the Pack
+Channel the Tempest
+Shadow Sigil
+Dark Return
+Pilfer
+Sabotage
+Suffocate
+Annihilate
+Devour
+Devouring Shadow
+Execute
+Madness
+Plague
+Shadowlands Guide
+Torrent of Spiders
+Xenan Destroyer
+Back-Alley Bouncer
+Cabal Recruiter
+Impending Doom
+Lethrai Falchion
+Soul Collector
+Stonescar Magus
+Ashara, the Deadshot
+Lurking Sanguar
+Merciless Stranger
+Argenport Ringmaster
+Direwood Rampager
+Horsesnatcher Bat
+Spirit Drain
+Venomspine Hydra
+Touch of the Umbren
+Vara, Fate-Touched
+The Last Word
+Praxis Banner
+Seat of Impulse
+Rakano Banner
+Seat of Glory
+Fearless Nomad
+Champion of Glory
+Rakano Artisan
+Crownwatch Deserter
+Ijin, Imperial Armorer
+Sword of Icaria
+Battleblur Centaur
+Longhorn Sergeant
+Navani, Warsinger
+Renegade Valkyrie
+Righteous Fury
+Deepforged Plate
+Field Captain
+Ferocious Stranger
+Icaria, the Liberator
+Combrei Banner
+Seat of Progress
+Awakened Student
+Desert Marshal
+Combrei Healer
+Knight-Chancellor Siraf
+Stand Together
+Vodakhan's Staff
+Copperhall Elite
+Enlightened Stranger
+Karmic Guardian
+The Great Parliament
+Reality Warden
+Champion of Progress
+Minotaur Ambassador
+Vodakhan, Temple Speaker
+A New Tomorrow
+Elysian Banner
+Seat of Wisdom
+Call the Ancients
+Accelerated Evolution
+Storm Lynx
+Amaran Camel
+False Prince
+Pteriax Hatchling
+Nesting Avisaur
+Cirso, the Great Glutton
+Hunting Pteriax
+Fortunate Stranger
+Curiox, the Collector
+Hooru Banner
+Seat of Order
+Argenport Banner
+Seat of Vengeance
+Seat of Fury
+Skycrag Banner
+Feln Banner
+Seat of Cunning
+Twilight Raptor
+Gorgon Swiftblade
+Grim Stranger
+Haunting Scream
+Feln Bloodcaster
+Gorgon Fanatic
+Midnight Gale
+Recurring Nightmare
+Trickster's Cloak
+Champion of Cunning
+Black-Sky Harbinger
+Nightmaw, Sight Unseen
+Snowcrush Animist
+Seat of Chaos
+Stonescar Banner
+Hair-Trigger Stranger
+Obsidian Golem
+Bloodrite Kalis
+Bandit Queen
+Statuary Maiden
+Runic Revolver
+Scraptank
+Warband Chieftain
+Infernal Tyrant
+Stonescar Leviathan
+Voprex, the Great Ruin
+Seat of Mystery
+Xenan Banner
+Combrei Stranger
+Daze
+Elysian Stranger
+Feln Stranger
+Rakano Stranger
+Stonescar Stranger
+Forsworn Stranger
+Scheme
+Deathstrike
+Grasping at Shadows
+Oblivion Spike
+Whispers in the Void
+The Witching Hour
+Rise to the Challenge
+Starsteel Daisho
+Safe Return
+Stronghold's Visage
+Twinning Ritual
+Crown of Possibilities
+Crystalline Chalice
+Feln Cauldron
+Feeding Time
+Spell Swipe
+Combust
+Treachery
+Brimstone Altar
+Black Iron Manacles
+Smuggler's Stash
+Diplomatic Seal
+Spiked Helm
+Worn Shield
+Alchemical Blast
+Magmahound
+Spiteling
+The Tormentor
+Stone Cudgel
+Obsidian Armor
+Serpent Hatchling
+Grenadin
+Frog
+Sky Serpent
+Pig
+Carnosaur
+Scorpion
+Locust
+Sandcrawler
+Vengeful Gargoyle
+Rhinarc
+Puma
+Wisp
+Gemblade
+Firebomb
+Direwood Beast
+Illusionary Dragon
+Sentinel
+Dragon's Eye
+Owl
+Pale Rider
+Pale Rider
+Pale Rider
+Pale Rider
+Titan
+Mithril Armor
+Iron Sword
+Shimmerpack
+Water of Life
+Sand Warrior
+Excavate
+Calderan Gunsmith
+Fevered Scout
+Find the Way
+Throne Warden
+Borderlands Waykeeper
+Xenan Cultist
+Avisaur Patriarch
+Bait
+Cabal Spymaster
+Cliffside Porter
+Combrei Emissary
+Copperhall Bailiff
+Hibernating Behemoth
+Hone
+Jekk, the Bounty Hunter
+Nictotraxian
+Passage of Eons
+Praxis Outlaw
+Quarry
+Shadowlands Feaster
+Stray into Shadow
+Tyrannize
+Honed Blade
+Cabal Countess
+Azindel's Gift
+Champion of Chaos
+Champion of Wisdom
+Cobalt Monument
+Crownwatch Paladin
+Explorer Emeritus
+Frontier Jito
+Jarrall Iceheart
+Scaly Gruan
+Soulfire Drake
+Spire Chaplain
+Staff of Stories
+Steward of the Past
+Subvert
+Thunderstrike Dragon
+Tundra Explorer
+Umbren Reaper
+Windshaper
+Withering Witch
+Stormdancer
+Azindel, the Wayfinder
+Rilgon, Hooru Operative
+Arcanum Monitor
+Blazing Renegade
+Oni Striker
+Alpine Tracker
+Oathbreaker
+Rapid Shot

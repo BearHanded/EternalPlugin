@@ -1,0 +1,8 @@
+(require '[clojure.java.io :as io])
+(def words
+  (-> (io/file "./cards.txt")
+  io/reader
+  line-seq))
+(def word-reg (frak/pattern words))
+(with-open [w (clojure.java.io/writer "./reg.txt" :append true)]
+  (.write w (str word-reg)))

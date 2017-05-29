@@ -1,7 +1,16 @@
-// Brendan Myers
-// Rudimentary Str search & highlight functions for card list app
-// Update to point to Eternal Warcry
-// https://eternalwarcry.com/cards/details/1-250
+/* Brendan Myers
+Content Script for the Eternal Card Plugin.
+
+To do:
+    Extra config options.
+    If card length doesn't find #, limit by max size. Replace in <p></p>
+    Create link for unfollowable highlights
+
+Links : URL/1-123
+Art   : URL/This_Is_a_Card
+ https://eternalwarcry.com/cards/details/1-250
+*/
+
 const SET_REGEX = /\(Set.*/,
     NUM_REGEX = /#.*\)/,
     ETERNAL_WARCRY = "https://eternalwarcry.com/cards/details/",
@@ -9,32 +18,46 @@ const SET_REGEX = /\(Set.*/,
     SM_CARD = "et-card-sm",
     MD_CARD = "et-card-md",
     LG_CARD = "et-card-lg",
+    XL_CARD = "et-card-xl",
     MAX_ENTRIES = 10,
     DECK_MIN = 6;
 
 var cardClass = MD_CARD,
     displayCards = true;
 
+var cardRegex = null;
+
+/* ---------------------------------
+ String Building
+-----------------------------------*/
 // Escape characters for strings that break links in the attributes. Funky quotes
 function strSanitize( stringIn ) {
-    // Clean up odd encoding of '
-    var cleaned = stringIn.replace(/’/g, "'")
+    // Clean up odd encoding of ' and ,
+    var cleaned = stringIn.replace(/’/g, "'");
+    cleaned = cleaned.replace(/,/g,",")
     cleaned = encodeURIComponent(cleaned).replace(/'/g, '%27')
+        .replace(/%252C/g, '%2C');
 
     //Remove leading underscores if exists
     cleaned = cleaned.replace(/^_/, '');
-    return cleaned
+    return cleaned;
 }
 
 function buildLink(dirUrl, imgId, text) {
     dirLink = '<a data-card-name="' + imgId + '" class="card-view" ';
-    dirLink += 'href="' + dirUrl + '" target="_blank">';
+    if(dirUrl !== null) {
+        dirLink += 'href="' + dirUrl + '" target="_blank">';
+    } else {
+        dirLink += 'href="#" onclick="return false;">'
+    }
     dirLink += text;
     dirLink += '</a>';
     return dirLink;
 }
 
-
+/* ---------------------------------
+ Content Management
+-----------------------------------*/
 /* Replace text with link - Chaos Champion -> "Chaos%20Champion"
 Returns [success(bool), link(str)] */
 function wrapLink(textIn) {
@@ -79,32 +102,78 @@ function wrapLink(textIn) {
     return [matched, dirLink];
 }
 
+// Logic for in paragraph links
+function textReplace(text){
+    return text.replace(cardRegex, function(match){
+        var card_name = match.split(" ").join("_");
+        card_name = strSanitize(card_name)
+        var link = buildLink(null, card_name, match)
+        return link;
+    })
+}
+
+//Splits individual text elements if necessary to perform linking
+var matchText = function(node, regex, callback, excludeElements) {
+
+    excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas']);
+    bk=0
+    node.data.replace(regex, function(all) {
+        var args = [].slice.call(arguments),
+            offset = args[args.length - 2],
+            newTextNode = node.splitText(offset+bk), tag;
+        bk -= node.data.length + all.length;
+
+        newTextNode.data = newTextNode.data.substr(all.length);
+        tag = callback.apply(window, [node].concat(args));
+        node.parentNode.insertBefore(tag, newTextNode);
+        node = newTextNode;
+    });
+
+    return node;
+};
+
+/* ---------------------------------
+ DOM Navigation Logic
+-----------------------------------*/
 //Card names should have "*(Set #*)"
 //Cards should be a whole line
 //Want [2]-> '(Set*'
-function crawlText(parentNode){
+function genLinks(parentNode){
     //Check each node, not just the flat body
     for(var i = parentNode.childNodes.length-1; i >= 0; i--){
         var node = parentNode.childNodes[i];
         //  Make sure this is a text node
         if(node.nodeType == Element.TEXT_NODE){
+            // Get Link
             var out = wrapLink(node.textContent);
             if(out[0] == true){
                 // out [0] contains whether or not a replacement was made
                 let newSpan = document.createElement('span');
                 newSpan.innerHTML = out[1];
                 node.parentNode.replaceChild(newSpan,node);
-            }
+            } else {
+                //Check for paragraph entries
+                //node.textContent = textReplace(node.textContent);
+                matchText(node, cardRegex, function(node, match, offset) {
+                    var span = document.createElement("span");
+                    span.className = "search-term";
+                    span.innerHTML = textReplace(match);
+                    return span;
+                });
 
+            }
         } else if(node.nodeType == Element.ELEMENT_NODE){
             //  Check this node's child nodes for text nodes to act on
 
-            crawlText(node);
+            genLinks(node);
         }
     }
 };
 
-function getSettings() {
+/* ---------------------------------
+ Settings & Init Listeners
+-----------------------------------*/
+function getConfig() {
     chrome.storage.sync.get(['cardSize', 'displayCard'], function(items) {
         //Defaults
         var size = 'medium'
@@ -119,18 +188,35 @@ function getSettings() {
             case "large":
                 cardClass = LG_CARD
                 break;
+            case "xlarge":
+                cardClass = XL_CARD
+                break;
             case "medium":
             default:
                 cardClass = MD_CARD
         }
     })
+
+    //Get Regex & Execute
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', chrome.extension.getURL('resources/card_match.txt'), true);
+    xhr.onreadystatechange = function()
+    {
+        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
+        {
+            //... The content has been read in xhr.responseText
+            cardRegex = RegExp(xhr.responseText, 'g')
+            genLinks(document.body);
+        }
+    };
+    xhr.send();
+
 };
 
 function init() {
     //Configure display settings from options
-    getSettings();
-    // Run Crawl
-    crawlText(document.body);
+    getConfig();  //Also calls to word match after load
+    // Run Crawl. Doesn't need to wait for asynchronous call
 
     // Add Hover Behavior
     $(document).ready(function () {
@@ -156,6 +242,9 @@ function init() {
                     size = 150;
                     break;
                 case LG_CARD:
+                    size = 450;
+                    break;
+                case XL_CARD:
                     size = 600;
                     break;
                 case MD_CARD:
@@ -180,4 +269,7 @@ function init() {
     });
 }
 
+// Run
 init()
+
+// EOF
