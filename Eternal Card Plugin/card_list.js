@@ -5,12 +5,14 @@ To do:
     Extra config options.
     If card length doesn't find #, limit by max size. Replace in <p></p>
     Create link for unfollowable highlights
+    Enabled features options: Card Display, Deck List, Names in paras
+    Copy Deck button
+    Optional Case Insensitive
 
 Links : URL/1-123
 Art   : URL/This_Is_a_Card
  https://eternalwarcry.com/cards/details/1-250
 */
-
 const SET_REGEX = /\(Set.*/,
     NUM_REGEX = /#.*\)/,
     ETERNAL_WARCRY = "https://eternalwarcry.com/cards/details/",
@@ -55,6 +57,52 @@ function buildLink(dirUrl, imgId, text) {
     return dirLink;
 }
 
+/*
+ * Title Caps
+ *
+ * Ported to JavaScript By John Resig - http://ejohn.org/ - 21 May 2008
+ * Original by John Gruber - http://daringfireball.net/ - 10 May 2008
+ * License: http://www.opensource.org/licenses/mit-license.php
+ */
+var small = "(a|an|and|as|at|but|by|en|for|if|in|of|on|or|the|to|v[.]?|via|vs[.]?)";
+var punct = "([!\"#$%&'()*+,./:;<=>?@[\\\\\\]^_`{|}~-]*)";
+
+titleCaps = function(title){
+    var parts = [], split = /[:.;?!] |(?: |^)["Ō]/g, index = 0;
+
+    while (true) {
+        var m = split.exec(title);
+
+        parts.push( title.substring(index, m ? m.index : title.length)
+            .replace(/\b([A-Za-z][a-z.'Õ]*)\b/g, function(all){
+                return /[A-Za-z]\.[A-Za-z]/.test(all) ? all : upper(all);
+            })
+            .replace(RegExp("\\b" + small + "\\b", "ig"), lower)
+            .replace(RegExp("^" + punct + small + "\\b", "ig"), function(all, punct, word){
+                return punct + upper(word);
+            })
+            .replace(RegExp("\\b" + small + punct + "$", "ig"), upper));
+
+        index = split.lastIndex;
+
+        if ( m ) parts.push( m[0] );
+        else break;
+    }
+
+    return parts.join("").replace(/ V(s?)\. /ig, " v$1. ")
+        .replace(/(['Õ])S\b/ig, "$1s")
+        .replace(/\b(AT&T|Q&A)\b/ig, function(all){
+            return all.toUpperCase();
+        });
+};
+
+function lower(word){
+    return word.toLowerCase();
+}
+
+function upper(word){
+  return word.substr(0,1).toUpperCase() + word.substr(1);
+}
 /* ---------------------------------
  Content Management
 -----------------------------------*/
@@ -105,7 +153,7 @@ function wrapLink(textIn) {
 // Logic for in paragraph links
 function textReplace(text){
     return text.replace(cardRegex, function(match){
-        var card_name = match.split(" ").join("_");
+        var card_name = titleCaps(match).split(" ").join("_");
         card_name = strSanitize(card_name)
         var link = buildLink(null, card_name, match)
         return link;
@@ -138,8 +186,13 @@ var matchText = function(node, regex, callback, excludeElements) {
 //Card names should have "*(Set #*)"
 //Cards should be a whole line
 //Want [2]-> '(Set*'
-function genLinks(parentNode){
+function genLinks(parentNode, cardMatch, deckButton){
+    //parent Node is normaly document.body.
+    //cardMatch(bool): Enable matching all text
     //Check each node, not just the flat body
+    var deckCount = 0; //Track at this node level
+        replacedChildren = false;
+    let deckBuffer = [];
     for(var i = parentNode.childNodes.length-1; i >= 0; i--){
         var node = parentNode.childNodes[i];
         //  Make sure this is a text node
@@ -151,35 +204,59 @@ function genLinks(parentNode){
                 let newSpan = document.createElement('span');
                 newSpan.innerHTML = out[1];
                 node.parentNode.replaceChild(newSpan,node);
-            } else {
+                replacedChildren = true;
+                depth = 1;
+                deckBuffer.push(node.textContent)
+            } else if (cardMatch == true){
                 //Check for paragraph entries
-                //node.textContent = textReplace(node.textContent);
                 matchText(node, cardRegex, function(node, match, offset) {
                     var span = document.createElement("span");
                     span.className = "search-term";
                     span.innerHTML = textReplace(match);
                     return span;
                 });
-
             }
         } else if(node.nodeType == Element.ELEMENT_NODE){
             //  Check this node's child nodes for text nodes to act on
+            outArray = genLinks(node, cardMatch, deckButton);
 
-            genLinks(node);
+            if(outArray[1].length>0) {
+                deckBuffer = deckBuffer.concat(outArray[1]);
+                if(!replacedChildren) {
+                    //Constructed a deck. Add button if desired
+                    if(deckButton) {
+                        //console.log("Aggregate (deck?): " + deckBuffer);
+                    }
+                    deckBuffer = []
+                }
+            }
+
+
         }
     }
+    out = [replacedChildren, deckBuffer]
+    return out
 };
 
 /* ---------------------------------
  Settings & Init Listeners
 -----------------------------------*/
 function getConfig() {
-    chrome.storage.sync.get(['cardSize', 'displayCard'], function(items) {
+    chrome.storage.sync.get(['cardSize', 'displayCard','caseSensitive', 'cardMatch', 'deckButton'],
+        function(items) {
+
         //Defaults
-        var size = 'medium'
+        var size = 'medium',
+            caseFlag = false,
+            cardMatch = true,
+            deckButton = false;
 
         //Load from memory
         if(typeof items.cardSize !== 'undefined') size = items.cardSize;
+        if(typeof items.caseSensitive !== 'undefined') caseFlag = !(items.caseSensitive);
+        if(typeof items.cardMatch !== 'undefined') cardMatch = items.cardMatch;
+        if(typeof items.deckButton !== 'undefined') deckButton = items.deckButton;
+
         //Switch to appropriate css class
         switch(size) {
             case "small":
@@ -195,21 +272,24 @@ function getConfig() {
             default:
                 cardClass = MD_CARD
         }
-    })
 
-    //Get Regex & Execute
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', chrome.extension.getURL('resources/card_match.txt'), true);
-    xhr.onreadystatechange = function()
-    {
-        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
+        //Get Regex & Execute
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', chrome.extension.getURL('resources/card_match.txt'), true);
+        xhr.onreadystatechange = function()
         {
-            //... The content has been read in xhr.responseText
-            cardRegex = RegExp(xhr.responseText, 'g')
-            genLinks(document.body);
-        }
-    };
-    xhr.send();
+            if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200)
+            {
+                var flags = 'g';
+                if (caseFlag)
+                    flags += 'i';
+                //... The content has been read in xhr.responseText
+                cardRegex = RegExp(xhr.responseText, flags)
+                genLinks(document.body, cardMatch, deckButton);
+            }
+        };
+        xhr.send();
+    })
 
 };
 
@@ -268,7 +348,6 @@ function init() {
         });
     });
 }
-
 // Run
 init()
 

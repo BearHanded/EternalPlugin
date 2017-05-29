@@ -5,7 +5,7 @@
     body: { padding: 10px; }
 </style>
 <body>
-
+<h2>Display:</h2>
 Card Preview display size:
 <select id="card-size">
  <option value="small">Small  (150px)</option>
@@ -15,6 +15,28 @@ Card Preview display size:
 </select>
 <br/>
 <br/>
+<h2>Behavior:</h2>
+<label>
+  <span>
+    <input type="checkbox" id="card-match">
+    Highlight all card names on page, not just in deck formats.
+  </span>
+</label>
+<br/><br/>
+<label>
+  <span>
+    <input type="checkbox" id="case-sensitive">
+    Case sensitive search (Only matches exact card name with capitalization).<br/>
+    Note: When off, substrings get picked up. eg "Generally" with have 'rally' listed as a card
+  </span>
+</label>
+<br/>
+<!--<label>
+  <span>
+    <input type="checkbox" id="deck-button">
+    Add a copy button after a deck is detected (Experimental).
+  </span>
+</label>-->
 <div id="status"></div>
 <button id="save">Save</button>
 

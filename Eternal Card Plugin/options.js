@@ -1,10 +1,17 @@
 // Saves options to chrome.storage
 function save_options() {
-  var size = document.getElementById('card-size').value;
-  var displayCard = true;
+  var size = document.getElementById('card-size').value,
+    displayCard = true,
+    caseSensitive = document.getElementById('case-sensitive').checked,
+    matchAll = document.getElementById('card-match').checked,
+    deckButton = document.getElementById('deck-button').checked;
+
   chrome.storage.sync.set({
     cardSize: size,
-    displayCard: displayCard
+    displayCard: displayCard,
+    caseSensitive: caseSensitive,
+    cardMatch: matchAll,
+    deckButton: deckButton
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
@@ -18,13 +25,18 @@ function save_options() {
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
-  // Use default value color = 'red' and likesColor = true.
+  //Defaults
   chrome.storage.sync.get({
     cardSize: 'medium',
-    displayCard: true
+    displayCard: true,
+    caseSensitive: true,
+    cardMatch: true,
+    deckButton: false
   }, function(items) {
     document.getElementById('card-size').value = items.cardSize;
-    document.getElementById('display-card').checked = items.displayCard;
+    document.getElementById('case-sensitive').checked = items.caseSensitive;
+    document.getElementById('card-match').checked = items.cardMatch;
+    document.getElementById('deck-button').checked = items.deckButton;
   });
 }
 
