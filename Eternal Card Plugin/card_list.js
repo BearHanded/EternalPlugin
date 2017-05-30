@@ -154,7 +154,7 @@ function wrapLink(textIn) {
 function textReplace(text){
     return text.replace(cardRegex, function(match){
         var card_name = titleCaps(match).split(" ").join("_");
-        card_name = strSanitize(card_name)
+        //card_name = strSanitize(card_name)
         var link = buildLink(null, card_name, match)
         return link;
     })
@@ -163,8 +163,13 @@ function textReplace(text){
 //Splits individual text elements if necessary to perform linking
 var matchText = function(node, regex, callback, excludeElements) {
 
-    excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas']);
+    excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas', 'a']);
     bk=0
+    //console.log(node)
+    /* TODO: Exclude
+    if(node.tagName !== undefined)
+        console.log("Match :" + node.tagName);
+    */
     node.data.replace(regex, function(all) {
         var args = [].slice.call(arguments),
             offset = args[args.length - 2],
