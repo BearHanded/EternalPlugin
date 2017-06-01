@@ -4,19 +4,27 @@ Content Script for the Eternal Card Plugin.
 To do:
     Extra config options.
     If card length doesn't find #, limit by max size. Replace in <p></p>
-    Create link for unfollowable highlights
+    Create link for unfollowable highlights. Ready to enable.
     Enabled features options: Card Display, Deck List, Names in paras
-    Copy Deck button
-    Optional Case Insensitive
+    Copy Deck button. (Future, export to Eternal Warcry)
 
 Links : URL/1-123
 Art   : URL/This_Is_a_Card
  https://eternalwarcry.com/cards/details/1-250
 */
+/*-----------------------
+    URL Notes:
+        Each address may have it's own scheme for the id/name
+        "https://eternalwarcry.com/cards/details/" + {Set-Number} (1-123)
+        "https://eternalwarcry.com/cards/details/name" + {"Card Name"} ("Light the Fuse")
+        "https://eternalwarcry.com/cards/cards/full" + {"Card_Name"} (1-123)name
+
+------------------------*/
 const SET_REGEX = /\(Set.*/,
     NUM_REGEX = /#.*\)/,
     ETERNAL_WARCRY = "https://eternalwarcry.com/cards/details/",
     CARD_ART =       "https://cards.eternalwarcry.com/cards/full/",
+    NAME_URL =       "https://eternalwarcry.com/cards/details/name/",
     SM_CARD = "et-card-sm",
     MD_CARD = "et-card-md",
     LG_CARD = "et-card-lg",
@@ -47,11 +55,8 @@ function strSanitize( stringIn ) {
 
 function buildLink(dirUrl, imgId, text) {
     dirLink = '<a data-card-name="' + imgId + '" class="card-view" ';
-    if(dirUrl !== null) {
-        dirLink += 'href="' + dirUrl + '" target="_blank">';
-    } else {
-        dirLink += 'href="#" onclick="return false;">'
-    }
+    dirLink += 'href="' + dirUrl + '" target="_blank">';
+
     dirLink += text;
     dirLink += '</a>';
     return dirLink;
@@ -153,9 +158,11 @@ function wrapLink(textIn) {
 // Logic for in paragraph links
 function textReplace(text){
     return text.replace(cardRegex, function(match){
-        var card_name = titleCaps(match).split(" ").join("_");
-        //card_name = strSanitize(card_name)
-        var link = buildLink(null, card_name, match)
+        let titleName = titleCaps(match);
+        var path = NAME_URL.concat(strSanitize(titleName));
+        var card_name = titleName.split(" ").join("_");
+
+        var link = buildLink(path, card_name, match);
         return link;
     })
 }
@@ -191,13 +198,14 @@ var matchText = function(node, regex, callback, excludeElements) {
 //Card names should have "*(Set #*)"
 //Cards should be a whole line
 //Want [2]-> '(Set*'
-function genLinks(parentNode, cardMatch, deckButton){
+function genLinks(parentNode, cardMatch, deckButton, callLevel = 0){
     //parent Node is normaly document.body.
     //cardMatch(bool): Enable matching all text
     //Check each node, not just the flat body
     var deckCount = 0; //Track at this node level
         replacedChildren = false;
     let deckBuffer = [];
+
     for(var i = parentNode.childNodes.length-1; i >= 0; i--){
         var node = parentNode.childNodes[i];
         //  Make sure this is a text node
@@ -223,7 +231,7 @@ function genLinks(parentNode, cardMatch, deckButton){
             }
         } else if(node.nodeType == Element.ELEMENT_NODE){
             //  Check this node's child nodes for text nodes to act on
-            outArray = genLinks(node, cardMatch, deckButton);
+            outArray = genLinks(node, cardMatch, deckButton, callLevel+1);
 
             if(outArray[1].length>0) {
                 deckBuffer = deckBuffer.concat(outArray[1]);
@@ -240,6 +248,7 @@ function genLinks(parentNode, cardMatch, deckButton){
         }
     }
     out = [replacedChildren, deckBuffer]
+
     return out
 };
 
@@ -294,6 +303,7 @@ function getConfig() {
             }
         };
         xhr.send();
+
     })
 
 };
