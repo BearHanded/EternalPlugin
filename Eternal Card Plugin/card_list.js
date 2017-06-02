@@ -29,10 +29,15 @@ const SET_REGEX = /\(Set.*/,
     MD_CARD = "et-card-md",
     LG_CARD = "et-card-lg",
     XL_CARD = "et-card-xl",
+    SM_PX = 150,
+    MD_PX = 300,
+    LG_PX = 450,
+    XL_PX = 600,
     MAX_ENTRIES = 10,
     DECK_MIN = 6;
 
 var cardClass = MD_CARD,
+    cardPx = MD_PX,
     displayCards = true;
 
 var cardRegex = null;
@@ -171,12 +176,13 @@ function textReplace(text){
 var matchText = function(node, regex, callback, excludeElements) {
 
     excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas', 'a']);
-    bk=0
-    //console.log(node)
-    /* TODO: Exclude
-    if(node.tagName !== undefined)
-        console.log("Match :" + node.tagName);
-    */
+    bk=0;
+    //TODO: Exclude
+    /*if(node[0] !== undefined){
+        console.log(node[0]);
+        if(node[0].tagName !== undefined)
+            console.log("Match :" + node.tagName);
+    }*/
     node.data.replace(regex, function(all) {
         var args = [].slice.call(arguments),
             offset = args[args.length - 2],
@@ -192,6 +198,29 @@ var matchText = function(node, regex, callback, excludeElements) {
     return node;
 };
 
+function makeButton(title, copyText) {
+    //PARTIAL SOLUTION FOR CREATING DECK LINKS
+    var buttHolder = document.createElement("SPAN");
+    var breaker = document.createElement("br");
+    var butt = document.createElement("BUTTON");
+    var buttText = document.createTextNode(title);
+
+    //Clipboard info
+    var btnClass = document.createAttribute("class");
+    btnClass.value = "deck-btn";
+    butt.setAttributeNode(btnClass);
+
+    var att = document.createAttribute("data-clipboard-text");
+    att.value = copyText;
+    butt.setAttributeNode(att);
+
+    butt.appendChild(buttText);
+    buttHolder.appendChild(butt);
+    buttHolder.appendChild(breaker);
+
+    return buttHolder;
+}
+
 /* ---------------------------------
  DOM Navigation Logic
 -----------------------------------*/
@@ -204,9 +233,12 @@ function genLinks(parentNode, cardMatch, deckButton, callLevel = 0){
     //Check each node, not just the flat body
     var deckCount = 0; //Track at this node level
         replacedChildren = false;
+    let lastOccurence = null;
+    let streakInfo = [null, null, 0] //depth, offset, distance
     let deckBuffer = [];
-
+    let map = []
     for(var i = parentNode.childNodes.length-1; i >= 0; i--){
+        streakInfo[2]++;
         var node = parentNode.childNodes[i];
         //  Make sure this is a text node
         if(node.nodeType == Element.TEXT_NODE){
@@ -218,36 +250,64 @@ function genLinks(parentNode, cardMatch, deckButton, callLevel = 0){
                 newSpan.innerHTML = out[1];
                 node.parentNode.replaceChild(newSpan,node);
                 replacedChildren = true;
-                depth = 1;
-                deckBuffer.push(node.textContent)
+                deckBuffer.unshift(node.textContent);
+
+                //Manage deck streak
+                if(lastOccurence !== null) {
+                    //Streak begins
+                    streakInfo[1] = streakInfo[2]
+                }
+                lastOccurence = newSpan
+                streakInfo[2] = 0; //Reset Current Distance
+
             } else if (cardMatch == true){
                 //Check for paragraph entries
                 matchText(node, cardRegex, function(node, match, offset) {
                     var span = document.createElement("span");
-                    span.className = "search-term";
+                    span.className = "card-match";
                     span.innerHTML = textReplace(match);
                     return span;
                 });
             }
         } else if(node.nodeType == Element.ELEMENT_NODE){
             //  Check this node's child nodes for text nodes to act on
+            //  [replacedChildren, deckBuffer, lastOccurence]
             outArray = genLinks(node, cardMatch, deckButton, callLevel+1);
 
             if(outArray[1].length>0) {
-                deckBuffer = deckBuffer.concat(outArray[1]);
-                if(!replacedChildren) {
-                    //Constructed a deck. Add button if desired
-                    if(deckButton) {
-                        //console.log("Aggregate (deck?): " + deckBuffer);
-                    }
-                    deckBuffer = []
+                //Build buffer & lastOccurence
+                deckBuffer = outArray[1].concat(deckBuffer);
+
+                //Track streak with depth
+                if(lastOccurence !== null) {
+                    //Streak begins
+                    streakInfo[1] = streakInfo[2]; //Offset = current distance
+                    streakInfo[0] = 1; //Match pattern found at depth 1
                 }
+                streakInfo[2] = 0; //Reset distance
+                lastOccurence = outArray[2];
             }
-
-
         }
+        //IF NO MATCH ON NODE CHECK IT FITS PATTERN
+        if((streakInfo[1] !== null) && (streakInfo[1] < streakInfo[2])) {
+            //Current distance > pattern offset. Pattern Break
+            if(deckButton) {
+                var newButton = makeButton("Copy Deck", deckBuffer.join(" "));
+                lastOccurence.parentNode.insertBefore(newButton, lastOccurence);
+            }
+            deckBuffer = []
+            streakInfo = [null, null, 0]
+        }
+
+    } // End Child Loop
+    //Check if constructed a deck on this node.
+    if(deckButton && (deckBuffer.length > DECK_MIN)) {
+        var newButton = makeButton("Copy Deck", deckBuffer.join(" "));
+        lastOccurence.parentNode.insertBefore(newButton, lastOccurence);
+        deckBuffer = []
+        streakInfo = [null, null, 0]
     }
-    out = [replacedChildren, deckBuffer]
+    out = [replacedChildren, deckBuffer, lastOccurence]
 
     return out
 };
@@ -270,22 +330,26 @@ function getConfig() {
         if(typeof items.caseSensitive !== 'undefined') caseFlag = !(items.caseSensitive);
         if(typeof items.cardMatch !== 'undefined') cardMatch = items.cardMatch;
         if(typeof items.deckButton !== 'undefined') deckButton = items.deckButton;
-
         //Switch to appropriate css class
         switch(size) {
             case "small":
-                cardClass = SM_CARD
+                cardClass = SM_CARD;
+                cardPx = SM_PX;
                 break;
             case "large":
-                cardClass = LG_CARD
+                cardClass = LG_CARD;
+                cardPx = LG_PX;
                 break;
             case "xlarge":
-                cardClass = XL_CARD
+                cardClass = XL_CARD;
+                cardPx = XL_PX;
                 break;
             case "medium":
             default:
                 cardClass = MD_CARD
+                cardPx = MD_PX;
         }
+
 
         //Get Regex & Execute
         var xhr = new XMLHttpRequest();
@@ -300,6 +364,8 @@ function getConfig() {
                 //... The content has been read in xhr.responseText
                 cardRegex = RegExp(xhr.responseText, flags)
                 genLinks(document.body, cardMatch, deckButton);
+                //Make all buttons copyable
+                new Clipboard('.deck-btn');
             }
         };
         xhr.send();
@@ -332,22 +398,8 @@ function init() {
                 .fadeIn("fast");
 
             //ADD CSS to img.
-            switch(cardClass) {
-                case SM_CARD:
-                    size = 150;
-                    break;
-                case LG_CARD:
-                    size = 450;
-                    break;
-                case XL_CARD:
-                    size = 600;
-                    break;
-                case MD_CARD:
-                default:
-                    size = 300;
-            }
             $("#card-img").children('img')
-                .css("height", size+"px")
+                .css("height", cardPx+"px")
                 .css("max-width", "100%")
         })
 
@@ -357,10 +409,28 @@ function init() {
         });
 
         $(".card-view").mousemove(function (e) {
+            // detect if close to edge
+            //$(window).width(), $(window).height()
+            relTop = $(window).scrollTop();
+            let xOffset = xOff
+                yOffset = yOff
+                threshold = cardPx;
+            //if ((e.pageX + threshold) > $(window).width()) {
+            if(e.pageX > ($(window).width() + $(window).scrollLeft() - threshold)) {
+                xOffset = -1*(threshold*(2/3) + xOff);
+            }
+            //if ((e.pageY + threshold) > $(window).height())
+            if(e.pageY > ($(window).height() + $(window).scrollTop() - threshold)) {
+                yOffset = (threshold - yOff);
+            }
             $("#card-img")
-                .css("top", (e.pageY - yOff) + "px")
-                .css("left", (e.pageX + xOff) + "px");
+                .css("top", (e.pageY - yOffset) + "px")
+                .css("left", (e.pageX + xOffset) + "px");
         });
+        //Detect new tabs opened (links followed, and close display)
+        //chrome.tabs.onCreated.addListener(function(tab) {
+        //    $(".card-view").dispatch(mouseleave);
+        //});
     });
 }
 // Run

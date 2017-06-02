@@ -3,8 +3,8 @@ function save_options() {
   var size = document.getElementById('card-size').value,
     displayCard = true,
     caseSensitive = document.getElementById('case-sensitive').checked,
-    matchAll = document.getElementById('card-match').checked;
-    deckButton = false;
+    matchAll = document.getElementById('card-match').checked,
+    deckButton = document.getElementById('deck-button').checked;
 
   chrome.storage.sync.set({
     cardSize: size,
@@ -36,7 +36,7 @@ function restore_options() {
     document.getElementById('card-size').value = items.cardSize;
     document.getElementById('case-sensitive').checked = items.caseSensitive;
     document.getElementById('card-match').checked = items.cardMatch;
-    //document.getElementById('deck-button').checked = items.deckButton;
+    document.getElementById('deck-button').checked = items.deckButton;
   });
 }
 
