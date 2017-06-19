@@ -31,7 +31,7 @@ function restore_options() {
     displayCard: true,
     caseSensitive: true,
     cardMatch: true,
-    deckButton: false
+    deckButton: true
   }, function(items) {
     document.getElementById('card-size').value = items.cardSize;
     document.getElementById('case-sensitive').checked = items.caseSensitive;

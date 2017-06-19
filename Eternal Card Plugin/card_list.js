@@ -113,6 +113,16 @@ function lower(word){
 function upper(word){
   return word.substr(0,1).toUpperCase() + word.substr(1);
 }
+
+function bufferTrim(buffer){
+    /* Trims extra white space and new line from each entry
+        and adds only a single new line to the end */
+    var cleanBuffer = []
+    for (var i in buffer){
+        cleanBuffer.push(buffer[i].trim())
+    }
+    return cleanBuffer.join("\n")
+}
 /* ---------------------------------
  Content Management
 -----------------------------------*/
@@ -121,7 +131,6 @@ Returns [success(bool), link(str)] */
 function wrapLink(textIn) {
     // 4 Desert Marshal (Set1 #332)
     // Split ['4', 'Desert', 'Marshal', '(Set1', '#332)']
-    //TODO: Need 1-332
 
     //vars
     var dirLink = textIn;
@@ -199,7 +208,6 @@ var matchText = function(node, regex, callback, excludeElements) {
 };
 
 function makeButton(title, copyText) {
-    //PARTIAL SOLUTION FOR CREATING DECK LINKS
     var buttHolder = document.createElement("SPAN");
     var breaker = document.createElement("br");
     var butt = document.createElement("BUTTON");
@@ -292,7 +300,7 @@ function genLinks(parentNode, cardMatch, deckButton, callLevel = 0){
         if((streakInfo[1] !== null) && (streakInfo[1] < streakInfo[2])) {
             //Current distance > pattern offset. Pattern Break
             if(deckButton) {
-                var newButton = makeButton("Copy Deck", deckBuffer.join(" "));
+                var newButton = makeButton("Copy Deck to Clipboard", bufferTrim(deckBuffer));
                 lastOccurence.parentNode.insertBefore(newButton, lastOccurence);
             }
             deckBuffer = []
@@ -302,7 +310,7 @@ function genLinks(parentNode, cardMatch, deckButton, callLevel = 0){
     } // End Child Loop
     //Check if constructed a deck on this node.
     if(deckButton && (deckBuffer.length > DECK_MIN)) {
-        var newButton = makeButton("Copy Deck", deckBuffer.join(" "));
+        var newButton = makeButton("Copy Deck to Clipboard", bufferTrim(deckBuffer));
         lastOccurence.parentNode.insertBefore(newButton, lastOccurence);
         deckBuffer = []
         streakInfo = [null, null, 0]
@@ -369,7 +377,7 @@ function getConfig() {
             }
         };
         xhr.send();
-
+        console.log("Watch for new elements: ")
     })
 
 };
