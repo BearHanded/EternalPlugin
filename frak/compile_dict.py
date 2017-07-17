@@ -8,6 +8,8 @@ with open('cards.json') as json_data, open('cards.txt', 'w') as outfile:
     #wrapper = json.load(json_data)
     #card_list = wrapper['Cards']
 
+    #TODO: Add list of common names/nicknames: i.e. Diogo
+
     card_list = json.load(json_data)
     for card in card_list:
         print card['Name']
