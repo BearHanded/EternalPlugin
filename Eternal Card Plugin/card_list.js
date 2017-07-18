@@ -393,7 +393,7 @@ function init() {
         var xOff = 25;
 
         //Don't build if setting is off
-        $(".card-view").on('mouseenter', ".card-view", function (e) {
+        $(document).on('mouseenter', ".card-view", function (e) {
             var cardName = strSanitize($(this).attr("data-card-name"))
             var artPath = CARD_ART.concat(cardName, ".png");
             var size = 600;
@@ -409,35 +409,14 @@ function init() {
             $("#card-img").children('img')
                 .css("height", cardPx+"px")
                 .css("max-width", "100%")
-        })
+        });
 
         //TRIGGERED ON MOVE?
-        $(".card-view").mouseleave(function () {
+        $(document).on('mouseleave', ".card-view", function () {
             $("#card-img").remove();
         });
 
-        // Single call solution
-        // $(".card-view").hover(function (e) {
-        //     var cardName = strSanitize($(this).attr("data-card-name"))
-        //     var artPath = CARD_ART.concat(cardName, ".png");
-        //     var size = 600;
-        //     $("body").append("<p id='card-img' class='" + cardClass + "'><img src='" + artPath + "'/></p>");
-        //     $("#card-img")
-        //         .css("position", "absolute")
-        //         .css("top", (e.pageY - yOff) + "px")
-        //         .css("left", (e.pageX + xOff) + "px")
-        //         .css("z-index", "999")
-        //         .fadeIn("fast");
-
-        //     //ADD CSS to img.
-        //     $("#card-img").children('img')
-        //         .css("height", cardPx+"px")
-        //         .css("max-width", "100%")
-        // }, function () {
-        //     $("#card-img").remove();
-        // });
-
-        $(".card-view").mousemove(function (e) {
+        $(document).on('mousemove', ".card-view", function (e) {
             // detect if close to edge
             //$(window).width(), $(window).height()
             relTop = $(window).scrollTop();

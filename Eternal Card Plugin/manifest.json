@@ -4,7 +4,7 @@
   "name": "Eternal Card Plugin",
   "short_name": "Card Plugin",
   "description": "View and link to cards on Eternal Warcry in your Browser",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "icons": { "128": "sigil-128.png" },
   "options_ui": {
     "page": "options.html",
