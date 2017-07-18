@@ -14,29 +14,36 @@ Card Preview display size:
  <option value="xlarge">Full Size (600px)</option>
 </select>
 <br/>
-<br/>
 <h2>Behavior:</h2>
 <label>
   <span>
     <input type="checkbox" id="card-match">
-    Highlight all card names on page, not just in deck formats.
+    <strong>Match All Card Names:</strong> Highlight all card names on page, not just in the exported deck format.
   </span>
 </label>
-<br/><br/>
+<br>
+<label>
+  <span>
+    <input type="checkbox" id="link-match">
+    <strong>Match Card Names in Links:</strong> When toggled on, will match names in links and post titles.
+  </span>
+</label>
+<br/>
 <label>
   <span>
     <input type="checkbox" id="case-sensitive">
-    Case sensitive search (Only matches exact card name with capitalization). (Default: On)
+    <strong>Case sensitive search:</strong> Only matches exact card name with capitalization. (Default: On)
   </span>
 </label>
 <br/>
 <label>
   <span>
     <input type="checkbox" id="deck-button">
-    Add "Copy Deck" button when a deck is detected.
+    <strong>Copy Deck:</strong> Add "Copy Deck" button when a deck is detected.
   </span>
 </label>
 <div id="status"></div>
+<hr>
 <button id="save">Save</button>
 
 <script src="options.js"></script>

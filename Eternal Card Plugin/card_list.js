@@ -6,7 +6,7 @@ To do:
     If card length doesn't find #, limit by max size. Replace in <p></p>
     Create link for unfollowable highlights. Ready to enable.
     Enabled features options: Card Display, Deck List, Names in paras
-    Copy Deck button. (Future, export to Eternal Warcry)
+    Export to Eternal Warcry
 
 Links : URL/1-123
 Art   : URL/This_Is_a_Card
@@ -182,16 +182,10 @@ function textReplace(text){
 }
 
 //Splits individual text elements if necessary to perform linking
-var matchText = function(node, regex, callback, excludeElements) {
-
-    excludeElements || (excludeElements = ['script', 'style', 'iframe', 'canvas', 'a']);
-    bk=0;
-    //TODO: Exclude
-    /*if(node[0] !== undefined){
-        console.log(node[0]);
-        if(node[0].tagName !== undefined)
-            console.log("Match :" + node.tagName);
-    }*/
+var matchText = function(node, regex, callback) {
+    // Match all text not in an excluded element against the regex.
+    // Replace the match with the appropriate link
+    bk=0;                                   //Padding for slices
     node.data.replace(regex, function(all) {
         var args = [].slice.call(arguments),
             offset = args[args.length - 2],
@@ -235,7 +229,7 @@ function makeButton(title, copyText) {
 //Card names should have "*(Set #*)"
 //Cards should be a whole line
 //Want [2]-> '(Set*'
-function genLinks(parentNode, cardMatch, deckButton, callLevel = 0){
+function genLinks(parentNode, cardMatch, linkMatch, deckButton, callLevel = 0){
     //parent Node is normaly document.body.
     //cardMatch(bool): Enable matching all text
     //Check each node, not just the flat body
@@ -280,7 +274,12 @@ function genLinks(parentNode, cardMatch, deckButton, callLevel = 0){
         } else if(node.nodeType == Element.ELEMENT_NODE){
             //  Check this node's child nodes for text nodes to act on
             //  [replacedChildren, deckBuffer, lastOccurence]
-            outArray = genLinks(node, cardMatch, deckButton, callLevel+1);
+
+            //Filter out links if unwanted
+            if(!linkMatch & node.tagName === "A") {
+                continue;
+            };
+            outArray = genLinks(node, cardMatch, linkMatch, deckButton, callLevel+1);
 
             if(outArray[1].length>0) {
                 //Build buffer & lastOccurence
@@ -324,20 +323,24 @@ function genLinks(parentNode, cardMatch, deckButton, callLevel = 0){
  Settings & Init Listeners
 -----------------------------------*/
 function getConfig() {
-    chrome.storage.sync.get(['cardSize', 'displayCard','caseSensitive', 'cardMatch', 'deckButton'],
-        function(items) {
+    //Declare what variables to retrieve, and act when loaded
+    var settings = ['cardSize', 'displayCard', 'caseSensitive',
+        'cardMatch', 'linkMatch', 'deckButton']
 
+    chrome.storage.sync.get(settings, function(items) {
         //Defaults
         var size = 'medium',
-            caseFlag = false,
-            cardMatch = true,
-            deckButton = false;
+            caseFlag   = false,
+            cardMatch  = true,
+            deckButton = false,
+            linkMatch  = true;
 
         //Load from memory
-        if(typeof items.cardSize !== 'undefined') size = items.cardSize;
-        if(typeof items.caseSensitive !== 'undefined') caseFlag = !(items.caseSensitive);
-        if(typeof items.cardMatch !== 'undefined') cardMatch = items.cardMatch;
-        if(typeof items.deckButton !== 'undefined') deckButton = items.deckButton;
+        if(typeof items.cardSize !== 'undefined')      size       = items.cardSize;
+        if(typeof items.caseSensitive !== 'undefined') caseFlag   = !(items.caseSensitive);
+        if(typeof items.cardMatch !== 'undefined')     cardMatch  = items.cardMatch;
+        if(typeof items.linkMatch !== 'undefined')     linkMatch  = items.linkMatch;
+        if(typeof items.deckButton !== 'undefined')    deckButton = items.deckButton;
         //Switch to appropriate css class
         switch(size) {
             case "small":
@@ -358,7 +361,6 @@ function getConfig() {
                 cardPx = MD_PX;
         }
 
-
         //Get Regex & Execute
         var xhr = new XMLHttpRequest();
         xhr.open('GET', chrome.extension.getURL('resources/card_match.txt'), true);
@@ -371,7 +373,7 @@ function getConfig() {
                     flags += 'i';
                 //... The content has been read in xhr.responseText
                 cardRegex = RegExp(xhr.responseText, flags)
-                genLinks(document.body, cardMatch, deckButton);
+                genLinks(document.body, cardMatch, linkMatch, deckButton);
                 //Make all buttons copyable
                 new Clipboard('.deck-btn');
             }

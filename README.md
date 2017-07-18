@@ -15,21 +15,12 @@ Frak must be run against the entire card list to generate the title regex. The /
 
 First modify the match words default setting in the cljx(?) script to true for exact matches.
 
-Navigate to a installed directory of Frak.
+Navigate to a installed directory of Frak and run:
 `lein repl`
 
-`user> (require '[clojure.java.io :as io])
-nil
-user> (def words
-           (-> (io/file "/usr/share/dict/words")
-               io/reader
-               line-seq))
-#'user/words
-user> (def word-re (frak/pattern words))
-#'user/word-re
-user> (every? #(re-matches word-re %) words)
-true`
+Once the configuration has been set up, run the text contained in `./frak/frak_console.txt`. This will output (and notably append) the generated regex to the card regex file.
 
+Finally, move the regex to the plugin's root folder -> `./resources/card_match.txt`
 
 # Acknowledgements & Resources
 + The plugin uses copy.js to provide copyable texts for deck lists
