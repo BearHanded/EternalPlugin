@@ -21,3 +21,5 @@ You must have Python and [lein](https://leiningen.org/) installed.
 
 # Acknowledgements & Resources
 + The plugin uses copy.js to provide copyable texts for deck lists
++ Thanks to eternalwarcry.com for the assistance and json of set lists
++ Thanks to [bbugh](https://github.com/bbugh) for the update for set 3, and automating the entire build process.
