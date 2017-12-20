@@ -3,7 +3,7 @@
 import json
 import os
 
-with open('cards.json') as json_data, open('cards.txt', 'w') as outfile:
+with open('eternal-cards.json') as json_data, open('./target/cards.txt', 'w') as outfile:
     #Initial call, previous json format
     #wrapper = json.load(json_data)
     #card_list = wrapper['Cards']
