@@ -15,7 +15,7 @@ To install the plugin, navigate to it's page in the [Google Web Store](https://c
 You must have Python and [lein](https://leiningen.org/) installed.
 
 1. `cd frak`
-2. `wget https://eternalwarcry.com/content/cards/eternal-cards.json`
+2. `wget -N https://eternalwarcry.com/content/cards/eternal-cards.json`
 3. `python compile_dict.py`
 4. `cat compile_regex.clj | lein repl`
 
